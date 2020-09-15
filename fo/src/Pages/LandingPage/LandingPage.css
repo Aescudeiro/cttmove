@@ -1,0 +1,35 @@
+.flex-container{
+    display: flex;
+}
+
+.picture{
+    background-image: url("../../Assets/new-picture.jpg");
+    width: 80%;
+    height: 530px; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+.white-bg{
+    width: 20%;
+    background-color: white;
+}
+
+.white-bg > h1{
+    position: absolute;
+    margin: 7rem 2rem;
+    font-size: 3.5rem;
+}
+
+.white-bg > button {
+    position: absolute;
+    margin: 21rem 0 0 2rem;
+    color: white;
+    padding: 1rem 1.5rem;
+    background-color: #f00000;
+    border: none;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+}

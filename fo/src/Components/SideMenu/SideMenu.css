@@ -1,0 +1,45 @@
+.side-menu{
+    background-color: rgb(231, 231, 231);
+    width: 16%;
+    height: 92vh;
+    padding: 2rem 2rem 1rem 2rem;
+}
+
+.side-menu-options > img{
+    width: 5rem;
+}
+.side-menu-options > ul{
+    padding: 0;
+}
+
+.side-menu-options > ul li{
+    list-style-type: none;
+    padding: 1rem 0;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.side-menu-options ul a{
+    text-decoration: none;
+    color: black;
+}
+
+.side-menu-options > ul a:hover, .bottom-options > a:hover{
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-color: red;
+}
+
+.side-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bottom-options > a{
+    display: block;
+    padding: 0.5rem 0;
+    text-decoration: none;
+    color: rgb(59, 59, 59);
+}
