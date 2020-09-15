@@ -1,6 +1,6 @@
 .side-menu{
     background-color: rgb(231, 231, 231);
-    width: 16%;
+    width: 17%;
     height: 92vh;
     padding: 2rem 2rem 1rem 2rem;
 }
@@ -29,6 +29,11 @@
     cursor: pointer;
     text-decoration: underline;
     text-decoration-color: red;
+}
+
+.active{
+    font-weight: 900;
+    color: red;
 }
 
 .side-menu{

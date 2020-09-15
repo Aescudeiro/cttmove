@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Route } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import "./App.css";
 import authService from "./services/auth-service";
 // Pages
@@ -19,10 +19,11 @@ const App = () => {
   }, []);
 
   return !currentUser ? (
-    <div>
+    <Switch>
       <Route exact path="/" component={LandingPage} />
       <Route path="/login" component={Login} />
-    </div>
+      <Redirect to="/" />
+    </Switch>
   ) : (
     <div>
       <DashBoard />
