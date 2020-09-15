@@ -1,20 +1,32 @@
-import React, { useState } from "react";
-import { Route } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Route, Switch, Redirect } from "react-router-dom";
 import "./App.css";
-
+import authService from "./services/auth-service";
 // Pages
 import LandingPage from "./Pages/LandingPage/LandingPage";
 import DashBoard from "./Pages/DashBoard/DashBoard";
+import Login from "./Pages/Login/Login";
 
 const App = () => {
-  const [login, setLogin] = useState(true);
+  const [currentUser, setCurrentUser] = useState(undefined);
 
-  return !login ? (
-    <Route exact path="/" component={LandingPage} />
+  useEffect(() => {
+    const user = authService.getCurrentUser();
+
+    if (user) {
+      setCurrentUser(user);
+    }
+  }, []);
+
+  return !currentUser ? (
+    <Switch>
+      <Route exact path="/" component={LandingPage} />
+      <Route path="/login" component={Login} />
+      <Redirect to="/" />
+    </Switch>
   ) : (
     <div>
       <DashBoard />
-
     </div>
   );
 };
