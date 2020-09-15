@@ -17,7 +17,9 @@ const SideMenu = (props) => {
   return (
     <div className="side-menu">
       <div className="side-menu-options">
-        <img src={cttLogo}></img>
+        <Link to="/">
+          <img src={cttLogo}></img>
+        </Link>
         <ul id="list">
           <li>
             <Link

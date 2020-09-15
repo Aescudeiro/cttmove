@@ -1,5 +1,15 @@
-body{
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    overflow: hidden;
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+}
+
+html,
+body {
+  max-height: 100%;
+  height: 100%;
+}
+
+#root {
+  height: inherit;
 }
