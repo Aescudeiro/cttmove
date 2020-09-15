@@ -1,8 +1,11 @@
 .side-menu{
     background-color: rgb(231, 231, 231);
     width: 17%;
-    height: 92vh;
+    height: 100vh;
     padding: 2rem 2rem 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .side-menu-options > img{
@@ -31,20 +34,13 @@
     text-decoration-color: red;
 }
 
-.active{
-    font-weight: 900;
-    color: red;
-}
-
-.side-menu{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
 .bottom-options > a{
     display: block;
     padding: 0.5rem 0;
     text-decoration: none;
     color: rgb(59, 59, 59);
+}
+
+.bottom-options{
+    padding-bottom: 3rem;
 }
