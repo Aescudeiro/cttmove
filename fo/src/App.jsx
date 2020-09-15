@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Route } from "react-router-dom";
 // Pages
 import LandingPage from "./Pages/LandingPage/LandingPage";
@@ -8,12 +8,25 @@ import Definicoes from "./Pages/DashBoard/Definicoes/Definicoes";
 import Ajuda from "./Pages/DashBoard/Ajuda/Ajuda";
 import Historico from "./Pages/DashBoard/Historico/Historico";
 import PedirReembolso from "./Pages/DashBoard/PedirReembolso/PedirReembolso";
+import Login from "./Pages/Login/Login";
+import authService from "./services/auth-service";
 
 const App = () => {
-  const [login, setLogin] = useState(true);
+  const [currentUser, setCurrentUser] = useState(undefined);
 
-  return !login ? (
-    <Route exact path="/" component={LandingPage} />
+  useEffect(() => {
+    const user = authService.getCurrentUser();
+
+    if (user) {
+      setCurrentUser(user);
+    }
+  }, []);
+
+  return !currentUser ? (
+    <div>
+      <Route exact path="/" component={LandingPage} />
+      <Route path="/login" component={Login} />
+    </div>
   ) : (
     <div>
       <Route exact path="/" component={DashBoard} />
