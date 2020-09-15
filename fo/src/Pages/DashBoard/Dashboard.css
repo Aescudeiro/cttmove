@@ -1,7 +1,9 @@
-.dashboard-container{
-    display: flex;
+.dashboard-container {
+  display: flex;
+  height: inherit;
 }
 
 .main-area {
-    padding: 0.5rem 2rem;
+  padding: 0.5rem 2rem;
+  flex-grow: 1;
 }

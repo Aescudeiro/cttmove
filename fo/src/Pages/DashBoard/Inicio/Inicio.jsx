@@ -1,10 +1,7 @@
 import React from "react";
-import SideMenu from "../../../Components/SideMenu/SideMenu";
 
 const Inicio = () => {
-  return <div>
-   
-   </div>
+  return <div>Inicio</div>;
 };
 
 export default Inicio;

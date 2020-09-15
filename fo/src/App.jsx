@@ -25,9 +25,7 @@ const App = () => {
       <Redirect to="/" />
     </Switch>
   ) : (
-    <div>
-      <DashBoard />
-    </div>
+    <DashBoard />
   );
 };
 
