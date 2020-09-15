@@ -1,0 +1,80 @@
+.login-container {
+  display: flex;
+}
+
+.picture {
+  background-image: url("../../Assets/computer.jpg");
+  width: 50%;
+  height: 100vh;
+}
+
+.form {
+  width: 50%;
+  margin: auto;
+}
+
+form{
+    padding: 18%;
+}
+
+.form p {
+  color: grey;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.form button {
+  color: white;
+  width: 100%;
+  background-color: #f00000;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  padding: 0.6rem;
+  border-radius: 5px;
+}
+
+label{
+    font-size: 0.8rem;
+}
+
+input{
+    width: 100%;
+    border: 1px solid rgb(156, 156, 156);
+    margin: 0.3rem 0 1.5rem 0;
+    border-radius: 5px;
+    height: 1.5rem;
+    padding: 0;
+}
+
+input::placeholder{
+    color: rgb(197, 197, 197);
+    padding-left: 0.5rem;
+}
+
+.form h5{
+    color: grey;
+    font-weight: 400;
+}
+
+#forgot-password {
+    color: red;
+    cursor: pointer;
+}
+
+#aqui-word{
+    color: red;
+    text-decoration: underline;
+    text-decoration-color: red;
+}
+#forgot-password:hover, #aqui-word:hover{
+    font-weight: 600;
+}
+
+#message{
+    font-size: 0.7rem;
+    color: red;
+    margin-top: 0.5rem;
+}

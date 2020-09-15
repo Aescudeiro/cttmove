@@ -1,7 +1,9 @@
 import React, { useState, useRef } from "react";
+import { Link } from "react-router-dom";
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
+import "./Login.css";
 
 import AuthService from "../../services/auth-service";
 
@@ -56,40 +58,46 @@ const Login = (props) => {
   };
 
   return (
-    <div>
-      Login
-      <Form onSubmit={handleLogin} ref={form}>
-        <div>
+    <div className="login-container">
+      <div className="form">
+        <Form onSubmit={handleLogin} ref={form}>
+          <h1>Entrar</h1>
+          <h5>Por favor introduza os dados que colocou durante o seu registo.</h5>
           <label htmlFor="email">Email</label>
           <Input
+            placeHolder="nome@dominio.com"
             type="text"
             name="email"
             value={email}
             onChange={(e) => onChange(e, setEmail)}
             validations={[required]}
           />
-        </div>
-        <div>
+
           <label htmlFor="password">Password</label>
           <Input
+            placeHolder="6+ caracteres"
             type="password"
             name="password"
             value={password}
             onChange={(e) => onChange(e, setPassword)}
             validations={[required]}
           />
-
-          <div>
-            <button disabled={loading}>
-              {loading && <span></span>}
-              <span>Login</span>
-            </button>
-          </div>
-
-          {message && <div>{message}</div>}
+          <button disabled={loading}>
+            {loading && <span></span>}
+            <span>Entrar</span>
+          </button>
+          {message && <div id="message">{message}</div>}
           <CheckButton style={{ display: "none" }} ref={checkBtn} />
-        </div>
-      </Form>
+          <p>
+            Ainda não tem conta? Registe-se{" "}
+            <Link to="/registo">
+              <span id="aqui-word">aqui.</span>
+            </Link>
+          </p>
+          <p id="forgot-password">Esqueceu-se da password?</p>
+        </Form>
+      </div>
+      <div className="picture"></div>
     </div>
   );
 };
