@@ -2,14 +2,15 @@ import React from "react";
 import "./SideMenu.css";
 import cttLogo from "../../Assets/logo-ctt.png";
 import { Link } from "react-router-dom";
-
+import $ from "jquery";
 
 const SideMenu = () => {
+
   return (
     <div className="side-menu">
       <div className="side-menu-options">
         <img src={cttLogo}></img>
-        <ul>
+        <ul id="list">
           <li><Link to="/">Início</Link></li>
           <li><Link to="/pedirreembolso">Pedir Reembolso</Link></li>
           <li><Link to="/definicoes">Definições</Link></li>

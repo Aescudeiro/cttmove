@@ -1,5 +1,6 @@
 import React from "react";
 import { Route } from "react-router-dom";
+import "./Dashboard.css";
 
 
 import SideMenu from "../../Components/SideMenu/SideMenu";
@@ -12,9 +13,9 @@ import PedirReembolso from "./PedirReembolso/PedirReembolso";
 
 const DashBoard = () => {
   return (
-    <div>
+    <div className="dashboard-container">
       <SideMenu/>
-      <div>
+      <div className="main-area">
       <Route exact path="/" component={Inicio} />
       <Route path="/definicoes" component={Definicoes} />
       <Route path="/ajuda" component={Ajuda} />

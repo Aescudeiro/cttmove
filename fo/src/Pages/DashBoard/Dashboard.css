@@ -1,0 +1,7 @@
+.dashboard-container{
+    display: flex;
+}
+
+.main-area {
+    padding: 0.5rem 8rem 0.5rem 3rem;
+}
