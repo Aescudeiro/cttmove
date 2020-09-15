@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:8080/api/auth/";
+const API_URL =
+  "http://ec2-13-58-153-19.us-east-2.compute.amazonaws.com:8080/api/auth/";
 
 const login = (email, password) => {
   return axios
