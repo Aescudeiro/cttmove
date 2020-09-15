@@ -5,8 +5,8 @@
 
 .picture {
   background-image: url("../../Assets/new-picture.jpg");
-  width: 80%;
-  height: 530px;
+  flex-grow: 1;
+  height: inherit;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -15,17 +15,20 @@
 .white-bg {
   width: 20%;
   background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.white-bg > h1 {
-  position: absolute;
-  margin: 7rem 2rem;
+.white-bg h1 {
+  position: relative;
+  margin-left: 4rem;
   font-size: 3.5rem;
 }
 
-.white-bg > button {
+.white-bg button {
   position: absolute;
-  margin: 21rem 0 0 2rem;
+  margin: 0 0 0 4rem;
   color: white;
   padding: 1rem 1.5rem;
   background-color: #f00000;
