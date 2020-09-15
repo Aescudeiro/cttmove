@@ -1,30 +1,50 @@
-.popup-container{
-    background-color: rgb(212, 0, 0);
+.popup-container button {
+  padding: 0.5rem 2rem;
+  border: 1px solid red;
+  cursor: pointer;
+  margin: 0.5rem;
+  background-color: white;
+}
+
+.popup-container button:hover {
+    background-color: red;
     color: white;
-    text-align: center;
-    padding: 3rem;
-    width: 30rem;
-    height: 6rem;
-    border-radius: 10px;
-}
-
-.popup-container button{
-    padding: 0.5rem 1rem;
-    background-color: white;
-    border: 1px solid red;
     cursor: pointer;
-    margin: 1rem;
+  }
+
+.popup-container {
+  font-weight: 500;
+  position: absolute;
+  text-align: center;
+  padding: 1.5rem 3rem;
+  background-color: white;
+  left: 30%;
+  right: 30%;
+  top: 35%;
+  bottom: 35%;
+  margin: auto;
+  border-radius: 20px;
+  z-index: 2;
 }
 
-.popup{
-   position: absolute;
-   margin: 14rem 30rem;
-   z-index: 2;
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.80);
+  z-index: 1;
 }
 
-.background{
-    width: 1000px;
-    height: 1000px;
-    background-color: rgba(0, 0, 0, 0.452);
-    z-index: 1;
+
+#close{
+    position: relative;
+    left: 220px;
+    bottom: 5px;
+    cursor: pointer;
+    color: rgb(56, 56, 56);
 }
