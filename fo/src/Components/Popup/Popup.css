@@ -1,14 +1,15 @@
 .popup-container button {
   padding: 0.5rem 2rem;
-  border: 1px solid red;
+  color: white;
+  border: 1px solid white;
   cursor: pointer;
   margin: 0.5rem;
-  background-color: white;
+  background-color: rgb(202, 0, 0);
 }
 
 .popup-container button:hover {
-    background-color: red;
-    color: white;
+    background-color: rgba(255, 255, 255, 0.85);
+    color: black;
     cursor: pointer;
   }
 
@@ -16,7 +17,7 @@
   font-weight: 500;
   position: absolute;
   text-align: center;
-  padding: 1rem 3rem;
+  padding: 1rem;
   background-color: rgb(202, 0, 0);
   color: white;
   left: 30%;
@@ -41,10 +42,23 @@
   z-index: 1;
 }
 
+.popup-container p {
+    padding-top: 2rem;
+}
+
 
 #close{
-    position: relative;
-    left: 220px;
-    bottom: 0;
     cursor: pointer;
+    float: right;
+    
 }
+
+
+@media screen and (max-width: 900px) {
+    .popup-container {
+        left: 10%;
+        right: 10%;
+        top: 35%;
+        bottom: 35%;
+      }
+  }
