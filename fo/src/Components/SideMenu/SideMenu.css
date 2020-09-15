@@ -1,61 +1,69 @@
-.side-menu{
-    background-color: rgb(231, 231, 231);
-    width: 10rem;
-    height: 100vh;
-    padding: 2rem 2rem 1rem 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.side-menu {
+  background-color: rgb(231, 231, 231);
+  width: 10rem;
+  height: 100vh;
+  padding: 2rem 2rem 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.side-menu-options > img{
-    width: 10rem;
+.side-menu-options > img {
+  width: 10rem;
 }
-.side-menu-options > ul{
-    padding: 0;
-}
-
-.side-menu-options > ul li{
-    list-style-type: none;
-    padding: 1rem 0;
-    font-weight: 400;
-    text-decoration: none;
+.side-menu-options > ul {
+  padding: 0;
 }
 
-.side-menu-options ul a{
-    text-decoration: none;
-    color: black;
+.side-menu-options > ul li {
+  list-style-type: none;
+  padding: 1rem 0;
+  font-weight: 400;
+  text-decoration: none;
 }
 
-.side-menu-options > ul a:hover, .bottom-options > a:hover{
-    font-weight: 600;
-    cursor: pointer;
-    text-decoration: underline;
-    text-decoration-color: red;
+.side-menu-options ul a {
+  text-decoration: none;
+  color: black;
 }
 
-.bottom-options > a{
-    display: block;
-    padding: 0.5rem 0;
-    text-decoration: none;
-    color: rgb(59, 59, 59);
+.side-menu-options > ul a:hover,
+.bottom-options > a:hover {
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: red;
 }
 
-.bottom-options{
-    padding-bottom: 3rem;
+.bottom-options > a {
+  display: block;
+  padding: 0.5rem 0;
+  text-decoration: none;
+  color: rgb(59, 59, 59);
 }
 
-#logout-button{
-    color: red;
-    padding: 0.5rem 1rem;
-    background-color: white;
-    border: 1px solid red;
-    cursor: pointer;
-    border-radius: 25px;
+.bottom-options {
+  padding-bottom: 3rem;
 }
 
-#logout-button:hover{
-    color: white;
-    background-color: red;
-    border: 1px solid red;
+#logout-button {
+  color: red;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  border: 1px solid red;
+  cursor: pointer;
+  border-radius: 25px;
+}
+
+#logout-button:hover {
+  color: white;
+  background-color: red;
+  border: 1px solid red;
+}
+
+.active {
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration-line: underline !important;
+  text-decoration-color: red !important;
 }
