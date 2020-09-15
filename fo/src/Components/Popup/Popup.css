@@ -1,0 +1,30 @@
+.popup-container{
+    background-color: rgb(212, 0, 0);
+    color: white;
+    text-align: center;
+    padding: 3rem;
+    width: 30rem;
+    height: 6rem;
+    border-radius: 10px;
+}
+
+.popup-container button{
+    padding: 0.5rem 1rem;
+    background-color: white;
+    border: 1px solid red;
+    cursor: pointer;
+    margin: 1rem;
+}
+
+.popup{
+   position: absolute;
+   margin: 14rem 30rem;
+   z-index: 2;
+}
+
+.background{
+    width: 1000px;
+    height: 1000px;
+    background-color: rgba(0, 0, 0, 0.452);
+    z-index: 1;
+}

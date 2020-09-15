@@ -1,14 +1,12 @@
-import React from "react";
+import React, {useState} from "react";
 import "./SideMenu.css";
 import cttLogo from "../../Assets/logo-ctt.png";
 import { Link } from "react-router-dom";
 import $ from "jquery";
+import { FaPowerOff } from 'react-icons/fa';
+import Popup from "../Popup/Popup";
 
 const SideMenu = (props) => {
-  const handleClick = () => {
-    localStorage.removeItem("user");
-    window.location.reload();
-  };
 
   return (
     <div className="side-menu">
@@ -27,12 +25,15 @@ const SideMenu = (props) => {
           <li>
             <Link to="/historico">Histórico</Link>
           </li>
+          <li>
+            <Link to="/ajuda">Ajuda</Link>
+          </li>
         </ul>
       </div>
       <div className="bottom-options">
-        <Link to="/ajuda">Ajuda</Link>
-        <Link to="/ajuda">Live Chat</Link>
-        <button onClick={() => handleClick()}>Sair</button>
+
+        {/* <Link to="/ajuda">Live Chat</Link> */}
+        <button id="logout-button" onClick={props.handleClick}><FaPowerOff /> Sair</button>
       </div>
     </div>
   );

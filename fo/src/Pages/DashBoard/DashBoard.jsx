@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
 import "./Dashboard.css";
 
@@ -9,11 +9,23 @@ import Ajuda from "./Ajuda/Ajuda";
 import Historico from "./Historico/Historico";
 import PedirReembolso from "./PedirReembolso/PedirReembolso";
 import DashHeader from "../../Components/DashHeader/DashHeader";
+import Popup from "../../Components/Popup/Popup";
 
-const DashBoard = () => {
+const DashBoard = (props) => {
+  const [showPopup, setShowPopup] = useState(false);
+
+  const handleClick = () => {
+    setShowPopup(!showPopup);
+  };
+
+  const shutApplication = () => {
+    localStorage.removeItem("user");
+    window.location.reload();
+  }
+
   return (
     <div className="dashboard-container">
-      <SideMenu />
+      <SideMenu handleClick={handleClick} />
       <DashHeader />
       <div className="main-area">
         <Switch>
@@ -25,6 +37,7 @@ const DashBoard = () => {
           <Redirect to="/" />
         </Switch>
       </div>
+      {showPopup ? (<Popup message="Tem a certeza que pretende sair dos CTT move?" shut={shutApplication} handleClick={handleClick} />) : null}
     </div>
   );
 };

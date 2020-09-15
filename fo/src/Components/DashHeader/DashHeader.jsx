@@ -4,7 +4,7 @@ import AuthService from "../../services/auth-service";
 const DashHeader = () => {
   return (
     <div>
-      <div>{AuthService.getCurrentUser().username}</div>
+      {/* <div>{AuthService.getCurrentUser().username}</div> */}
     </div>
   );
 };

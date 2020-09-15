@@ -1,6 +1,6 @@
 .side-menu{
     background-color: rgb(231, 231, 231);
-    width: 17%;
+    width: 10rem;
     height: 100vh;
     padding: 2rem 2rem 1rem 2rem;
     display: flex;
@@ -9,7 +9,7 @@
 }
 
 .side-menu-options > img{
-    width: 5rem;
+    width: 10rem;
 }
 .side-menu-options > ul{
     padding: 0;
@@ -43,4 +43,19 @@
 
 .bottom-options{
     padding-bottom: 3rem;
+}
+
+#logout-button{
+    color: red;
+    padding: 0.5rem 1rem;
+    background-color: white;
+    border: 1px solid red;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+#logout-button:hover{
+    color: white;
+    background-color: red;
+    border: 1px solid red;
 }
