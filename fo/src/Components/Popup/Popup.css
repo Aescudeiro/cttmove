@@ -16,8 +16,9 @@
   font-weight: 500;
   position: absolute;
   text-align: center;
-  padding: 1.5rem 3rem;
-  background-color: white;
+  padding: 1rem 3rem;
+  background-color: rgb(202, 0, 0);
+  color: white;
   left: 30%;
   right: 30%;
   top: 35%;
@@ -44,7 +45,6 @@
 #close{
     position: relative;
     left: 220px;
-    bottom: 5px;
+    bottom: 0;
     cursor: pointer;
-    color: rgb(56, 56, 56);
 }
