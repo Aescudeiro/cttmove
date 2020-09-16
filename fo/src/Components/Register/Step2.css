@@ -1,0 +1,11 @@
+.data {
+  display: flex;
+}
+
+.data div {
+  width: 100%;
+}
+
+#cc {
+  padding-left: 1rem;
+}

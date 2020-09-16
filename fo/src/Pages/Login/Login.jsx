@@ -90,7 +90,7 @@ const Login = (props) => {
           <CheckButton style={{ display: "none" }} ref={checkBtn} />
           <p>
             Ainda não tem conta? Registe-se{" "}
-            <Link to="/registo">
+            <Link to="/register">
               <span id="aqui-word">aqui.</span>
             </Link>
           </p>
