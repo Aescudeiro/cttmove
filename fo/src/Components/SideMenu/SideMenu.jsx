@@ -71,7 +71,7 @@ const SideMenu = (props) => {
       <div className="bottom-options">
         {/* <Link to="/ajuda">Live Chat</Link> */}
         <button id="logout-button" onClick={props.handleClick}>
-          <FaPowerOff /> Sair
+          <FaPowerOff id="icon" /> Sair
         </button>
       </div>
     </div>

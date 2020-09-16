@@ -9,7 +9,7 @@ const LandingHeader = () => {
       <img src={cttLogo}></img>
       <div className="links">
         <Link to="/login">Entrar</Link>
-        <button>Registar</button>
+        <button><Link to="/register" id="registar">Registar</Link></button>
       </div>
     </div>
   );
