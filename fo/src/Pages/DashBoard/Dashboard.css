@@ -4,7 +4,7 @@
 }
 
 .main-area {
-  padding: 0.5rem 2rem;
+  padding: 0 4rem;
   flex-grow: 1;
   overflow-y: scroll;
 }

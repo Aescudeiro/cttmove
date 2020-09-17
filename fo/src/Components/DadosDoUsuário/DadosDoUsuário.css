@@ -1,0 +1,12 @@
+#dados{
+    margin: 2rem 0;
+    padding: 0;
+}
+
+label{
+    display: inline;
+}
+
+#zip-code{
+    width: 50%;
+}
