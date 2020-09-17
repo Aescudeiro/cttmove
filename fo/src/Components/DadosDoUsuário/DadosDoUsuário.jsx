@@ -7,30 +7,41 @@ const DadosDoUsuário = () => {
 
   const user = AuthService.getCurrentUser()
 
-  return <div>
-    <form id="dados">
+  return (
+    <form id="form-container">
       <label>Nome Completo</label>
-      <input value={user.fullName}></input>
+      <input type="text" value={user.fullName}></input>
 
       <label>Data de Nascimento</label>
-      <input value={user.birthDate}></input>
+      <input type="text" value={user.birthDate}></input>
 
       <label>Morada Fiscal</label>
-      <input value={user.taxAddress}></input>
+      <input type="text" value={user.taxAddress}></input>
 
-      <label >Código Postal</label>
-      <input id="zip-code" value={user.postCode}></input>
-
-      <label>Localidade</label>
-      <input value={user.location}></input>
-
-      <label>NIF</label>
-      <input value={user.nif}></input>
-
-      <label>Nº Cartão de Cidadão</label>
-      <input value={user.ccNumber}></input>
+      <div className="inputs-xs">
+        <div>
+          <label>Código Postal</label>
+          <input type="text" value={user.postCode}></input>
+        </div>
+        <div id="location">
+          <label>Localidade</label>
+          <input type="text" value={user.location}></input>
+        </div>
+        <div>
+          <label>NIF</label>
+          <input type="text" value={user.nif}></input>
+        </div>
+        <div id="cc">
+          <label >Nº Cartão de Cidadão</label>
+          <input type="text" value={user.ccNumber}></input>
+        </div>
+        <div id="button-container">
+        <button>Guardar</button>
+        </div>
+      </div>
+      
     </form>
-  </div>;
+  )
 };
 
 export default DadosDoUsuário;

@@ -1,0 +1,20 @@
+#iban{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+#alterar-iban{
+    color:red;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.description{
+    color: grey;
+    margin: 0;
+}
+
+#form-container .title{
+    margin-bottom: 0.5rem;
+}
