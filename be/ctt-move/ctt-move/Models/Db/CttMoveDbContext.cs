@@ -22,10 +22,9 @@ namespace cttMove.Models.Db
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=.\\SQLEXPRESS;Database=Raul;Integrated Security=SSPI;");
+                optionsBuilder.UseSqlServer("Server=18.222.104.139:3306\\SQLEXPRESS;Database=cttmove;User ID=root;Password=;");
             }
         }
-
 
     }
 
