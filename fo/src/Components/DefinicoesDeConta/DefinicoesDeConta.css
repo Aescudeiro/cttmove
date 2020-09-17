@@ -6,7 +6,6 @@
 
 #password h4{
     margin:0;
-    font-size: 0.8rem;
     color: red;
     text-decoration: underline;
     cursor: pointer;

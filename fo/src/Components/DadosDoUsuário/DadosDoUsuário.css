@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+#form-container label{
+    font-weight: 600;
+}
+
 .inputs-xs{
     display:flex;
     justify-content: space-between;

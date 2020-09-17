@@ -1,25 +1,22 @@
 import React from "react";
-import "./IbanPopup.css";
+import "./PasswordPopup.css";
 import { FaTimes } from "react-icons/fa";
 
-const Popup = (props) => {
+const PasswordPopup = (props) => {
+
   return (
     <>
       <div className="iban-popup-container">
         <div className="top-section">
-          <h1>Alteração de IBAN</h1>
+          <h1>Alteração de Password</h1>
           <FaTimes size={25} onClick={props.handleClick} id="close-icon" />
         </div>
 
         <div className="fields">
-          <h5>Novo Iban</h5>
-          <input placeholder="PT50" type="text"></input>
-          <h5>Comprovativo</h5>
-
-          <div className="choose-file">
-            <button>Escolher Ficheiro</button>
-            <p id="info">{"Nenhum Ficheiro Seleccionado."}</p>
-          </div>
+          <h5>Password Actual</h5>
+          <input placeholder="6+ caracteres" type="text"></input>
+          <h5>Nova Password</h5>
+          <input placeholder="6+ caracteres" type="text"></input>
           <div className="save-button">
             <button>Guardar</button>
           </div>
@@ -31,4 +28,4 @@ const Popup = (props) => {
   );
 };
 
-export default Popup;
+export default PasswordPopup;
