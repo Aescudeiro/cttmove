@@ -1,11 +1,7 @@
 import React from "react";
 import "./MetodosDePagamento.css";
 
-import AuthService from "../../services/auth-service"
-
-const MetodosDePagamento = (props) => {
-    const user = AuthService.getCurrentUser()
-
+const MetodosDePagamento = () => {
     return (
         <form id="form-container">
             <h2 className="title">Transferência Bancária</h2>
