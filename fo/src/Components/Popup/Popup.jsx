@@ -6,10 +6,9 @@ const Popup = (props) => {
   return (
     <>
       <div className="popup-container">
-        <a id="close" onClick={props.handleClick}>
-          <FaTimes size={25} />
-        </a>
+        {/* <FaTimes id="close" size={25} /> */}
         <p>{props.message}</p>
+        <button onClick={props.handleClick}>Não</button>
         <button onClick={props.shut}>Sim</button>
       </div>
       <div className="background" onClick={props.handleClick}></div>
