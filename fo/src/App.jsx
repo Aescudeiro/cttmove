@@ -6,7 +6,7 @@ import authService from "./services/auth-service";
 import LandingPage from "./Pages/LandingPage/LandingPage";
 import DashBoard from "./Pages/DashBoard/DashBoard";
 import Login from "./Pages/Login/Login";
-import RegisterMasterForm from "./Pages/Register/RegisterMasterForm";
+import Register from "./Pages/Register/Register";
 
 const App = () => {
   const [currentUser, setCurrentUser] = useState(undefined);
@@ -23,7 +23,7 @@ const App = () => {
     <Switch>
       <Route exact path="/" component={LandingPage} />
       <Route path="/login" component={Login} />
-      <Route path="/register" component={RegisterMasterForm} />
+      <Route path="/register" component={Register} />
       <Redirect to="/" />
     </Switch>
   ) : (
