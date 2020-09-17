@@ -1,42 +1,43 @@
-#title {
-    color:  #f00000;
-    font-size: 3rem;
+.title {
+  color: #f00000;
+  font-size: 3rem;
 }
 
-
-#tel{
-    color: #f00000;
+#tel {
+  color: #f00000;
 }
 
-#ou, #contact-form, #tel{
-    display: inline;
+#ou,
+#contact-form,
+#tel {
+  display: inline;
 }
 
-#ou{
-    padding: 2rem;
-    font-weight: bold;
+#ou {
+  padding: 2rem;
+  font-weight: bold;
 }
 
-#contact-form{
-    color: white;
-    padding: 1rem 1.3rem;
-    background-color: #f00000;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 1rem;
-    margin-top: 1.5rem;
+#contact-form {
+  color: white;
+  padding: 1rem 1.3rem;
+  background-color: #f00000;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1.5rem;
 }
 
 .help-container p {
-    color: grey;
-    margin: 0.2rem 0;
+  color: grey;
+  margin: 0.2rem 0;
 }
 
 .help-container h4 {
-    margin: 1.5rem 0 0 0 ;
+  margin: 1.5rem 0 0 0;
 }
 
-hr{
-    margin: 2rem 0;
+hr {
+  margin: 2rem 0;
 }
