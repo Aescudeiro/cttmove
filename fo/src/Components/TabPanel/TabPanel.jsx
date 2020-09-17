@@ -5,16 +5,11 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 
 export default function DisabledTabs(props) {
-  const [value, setValue] = useState(0);
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
 
   return (
     <Paper square id="paper">
       <Tabs
-        value={value}
+        value={props.value}
         indicatorColor="secondary"
         textColor="black"
         onChange={props.handleChange}
