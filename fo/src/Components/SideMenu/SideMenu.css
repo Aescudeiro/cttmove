@@ -47,12 +47,19 @@
 }
 
 #logout-button {
+  display:flex;
+  align-items: center;
   color: red;
   padding: 0.5rem 1rem;
   background-color: white;
   border: 1px solid red;
   cursor: pointer;
   border-radius: 25px;
+  font-weight: 600;
+}
+
+#icon{
+  padding-right: 0.4rem;
 }
 
 #logout-button:hover {

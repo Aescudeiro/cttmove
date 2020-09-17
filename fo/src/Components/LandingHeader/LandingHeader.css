@@ -19,10 +19,15 @@
 
 /*Registar*/
 .links > button {
-    color: white;
     padding: 0.7rem 1.3rem;
     background-color: #f00000;
     border: none;
     font-weight: bold;
     cursor: pointer;
+    text-decoration: none;
+}
+
+.links #registar{
+    text-decoration: none;
+    color: white;
 }

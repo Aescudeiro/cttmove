@@ -1,0 +1,45 @@
+.register-container{
+    display: flex;
+}
+
+#gov-button {
+    border-radius: 0;
+    background-color: rgb(69, 104, 180);
+    font-weight: 300;
+    font-size: 0.8rem;
+}
+
+form{
+    padding: 0 10%;
+}
+
+#continuar-button{
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: red;
+    background-color: white;
+    border: 1px solid red;
+    width: 30%;
+    margin-left: 70%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+
+#continuar-button:hover{
+    color: white;
+    background-color: red;
+    border: 1px solid red;
+}
+
+p span {
+    color: red;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+#question{
+    margin-top: 10%;
+}
+
