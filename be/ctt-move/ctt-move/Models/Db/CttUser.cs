@@ -1,10 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ctt-move.Models.Db
+namespace cttMove.Models.Db
 {
     public partial class CttUser
     {
+        public CttUser()
+        {
+            Refund = new HashSet<Refund>();
+        }
+
         public string Email { get; set; }
         public string Pass { get; set; }
         public string FullName { get; set; }
@@ -14,5 +19,7 @@ namespace ctt-move.Models.Db
         public string Locality { get; set; }
         public int? Iban { get; set; }
         public int? Phone { get; set; }
+
+        public ICollection<Refund> Refund { get; set; }
     }
 }
