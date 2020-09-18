@@ -1,7 +1,7 @@
 import React from "react";
 import "./Popup.css";
-import { FaTimes } from "react-icons/fa";
-
+/* import { FaTimes } from "react-icons/fa";
+ */
 const Popup = (props) => {
   return (
     <>

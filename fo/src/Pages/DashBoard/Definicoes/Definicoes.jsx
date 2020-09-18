@@ -15,13 +15,13 @@ const Definicoes = () => {
   const checkValue = (value) => {
     switch (value) {
       case 0:
-        return <DadosDoUsuário />
+        return <DadosDoUsuário />;
       case 1:
-        return <MetodosDePagamento />
+        return <MetodosDePagamento />;
       case 2:
-        return <DefinicoesDeConta/>;
+        return <DefinicoesDeConta />;
     }
-  }
+  };
 
   return <div>
     <h1 id="title">Definições</h1>

@@ -1,0 +1,11 @@
+.graph {
+  box-shadow: -12px 1px 20px 2px rgba(240, 240, 240, 1);
+  border-radius: 8px;
+}
+
+#graph-container {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  margin-top: 2rem;
+}
