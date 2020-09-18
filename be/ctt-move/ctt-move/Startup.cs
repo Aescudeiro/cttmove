@@ -30,7 +30,7 @@ namespace CttWebApi
                 });
             });
 
-            services.AddDbContext<CttMoveDbContext>((options => options.UseSqlServer("Server=localhost\\SQLEXPRESS;Database=Raul;Integrated Security=SSPI;")));
+            services.AddDbContext<CttMoveDbContext>(options => options.UseSqlServer("Server=tcp:cttmove.database.windows.net;Database=cttmove;User ID=cttmove;Password=hack2emerge!;"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
