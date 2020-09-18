@@ -32,5 +32,24 @@ namespace cttMove.Controllers
             loggedUser.Pass = ""; //Should improve this using DTOs;
             return Ok(loggedUser);
         }
+
+        [HttpPost("register-email")]
+        public IActionResult register ([FromBody] CttUser user)
+        {
+            bool isEmailFree = authService.registerNewEmail(user.Email, user.Pass);
+            
+            if (!isEmailFree)
+            {
+                return BadRequest();
+            }
+
+            return Ok();
+        }
+
+        [HttpPost("register-details")]
+        public IActionResult registerDetails([FromBody] CttUser user)
+        {
+
+        }
     }
 }

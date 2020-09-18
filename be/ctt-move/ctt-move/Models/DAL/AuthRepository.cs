@@ -20,5 +20,14 @@ namespace cttMove.Models.DAL
         {
             return dbContext.CttUser.Where(u => u.Email == email).FirstOrDefault();
         }
+
+        public void registerNewEmail (string email, string password)
+        {
+            dbContext.CttUser.Add(new CttUser
+            {
+                Email = email,
+                Pass = password
+            });
+        }
     }
 }

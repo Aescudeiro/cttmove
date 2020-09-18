@@ -33,6 +33,21 @@ namespace cttMove.Services
             return isPassCorrect ? user : null;
         }
 
+        public bool registerNewEmail (string email, string password)
+        {
+            CttUser user = _authRepository.getUser(email);
+
+            if (user != null)
+            {
+                return false;
+            }
+
+            string hashedPassword = hash(password);
+            _authRepository.registerNewEmail(email, hashedPassword);
+
+            return true;
+        }
+
         //TODO: This should be a separate class. It's an utility service
         private string hash(string password, int iterations)
         {
