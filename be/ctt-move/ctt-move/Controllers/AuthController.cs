@@ -30,13 +30,24 @@ namespace cttMove.Controllers
             {
                 return BadRequest();
             }
-            loggedUser.Pass = ""; //Should improve this using DTOs;
                 
             var token = TokenService.GenerateToken(loggedUser);
 
+            var userDTO = new //DTO Should be a proper DTO class...
+            {
+                Email = loggedUser.Email,
+                FullName = loggedUser.FullName,
+                BirthDate = loggedUser.BirthDate,
+                Nif = loggedUser.Nif,
+                CcNumber = loggedUser.CcNumber,
+                Locality = loggedUser.Locality,
+                Iban = loggedUser.Iban,
+                Phone = loggedUser.Phone
+            };
+
             return Ok( new
             {
-                user = loggedUser,
+                user = userDTO,
                 token = token
             });
         }
