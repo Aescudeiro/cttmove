@@ -253,7 +253,7 @@ const Register = (props) => {
           </div>
 
           {show !== "step3" && show !== "step4" ?
-            <button id="continuar-button" onClick={(e) => handleClick(e)} disabled={true}>Continuar<FaChevronRight /></button>
+            <button id="continuar-button" onClick={(e) => handleClick(e)}>Continuar<FaChevronRight /></button>
             : show === "step4" ?
               null
               :
