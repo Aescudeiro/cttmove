@@ -1,45 +1,146 @@
-.register-container{
-    display: flex;
+.register-container {
+  display: flex;
+}
+
+.register-form {
+  width: 50%;
+}
+
+.register-container img {
+  width: 50%;
+}
+
+#form h1{
+    margin: 0;
 }
 
 #gov-button {
-    border-radius: 0;
-    background-color: rgb(69, 104, 180);
-    font-weight: 300;
-    font-size: 0.8rem;
+  width: 100%;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  border-radius: 3px;
+  border: none;
+  background-color: rgb(69, 104, 180);
+  color: white;
+  font-weight: 300;
+  font-size: 0.8rem;
+  cursor: pointer;
 }
 
-form{
-    padding: 0 10%;
+#continuar-button,
+#completar-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: red;
+  background-color: white;
+  border: 1px solid red;
+  width: 30%;
+  margin-left: 70%;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  border-radius: 3px;
 }
 
-#continuar-button{
-    display:flex;
-    align-items: center;
-    justify-content: space-evenly;
-    color: red;
-    background-color: white;
-    border: 1px solid red;
-    width: 30%;
-    margin-left: 70%;
-    padding: 0.5rem;
-    margin-top: 0.5rem;
+#continuar-button:hover {
+  background-color: red;
+  color: white;
+  cursor: pointer;
 }
 
-
-#continuar-button:hover{
-    color: white;
-    background-color: red;
-    border: 1px solid red;
+#completar-button {
+  background-color: red;
+  color: white;
+  padding: 0.5rem 1rem;
 }
 
-p span {
-    color: red;
-    text-decoration: underline;
+.register-container h6 {
+  margin: 0;
+  color: red;
+}
+
+input {
+  margin: 0;
+}
+
+.register-form div {
+  margin: 0.5rem 0;
+}
+
+#subtitle {
+  color: grey;
+  font-size: 0.8rem;
+  margin-top: 0;
+}
+
+/* Final Step */
+#voltar-button {
+  width: 100%;
+  background-color: red;
+  border-radius: 5px;
+  border: 0;
+  padding: 0.5rem;
+  margin: 1rem 0;
+}
+
+.final-step-container a {
+  text-decoration: none;
+  color: white;
+}
+.final-step-container {
+  text-align: center;
+}
+
+.final-step-container h2 {
+  font-size: 1.35rem;
+  margin: 0;
+}
+
+.final-step-container h2 {
+  margin: 2rem 0 0 0;
+}
+.final-step-container h5 {
+  margin-top: 0.5rem;
+  color: grey;
+}
+
+#nif-and-cc-container {
+  display: flex;
+}
+
+#nif,
+#cc {
+  width: 50%;
+}
+
+#cc {
+  padding-left: 1rem;
+}
+
+#step4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#step2 {
+  justify-content: space-between;
+}
+
+#form {
+  height: 100%;
+  padding: 10% 18%;
+}
+
+.bottom-text {
+  color: grey;
+  font-size: 0.8rem;
+  text-align: center;
+}
+.bottom-text span a {
+  color: red;
+}
+
+.bottom-text span a:hover {
     font-weight: 600;
 }
-
-#question{
-    margin-top: 10%;
-}
-

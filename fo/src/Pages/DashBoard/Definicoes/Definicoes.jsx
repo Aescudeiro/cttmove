@@ -15,17 +15,17 @@ const Definicoes = () => {
   const checkValue = (value) => {
     switch (value) {
       case 0:
-        return <DadosDoUsuário />
+        return <DadosDoUsuário />;
       case 1:
-        return <MetodosDePagamento />
+        return <MetodosDePagamento />;
       case 2:
-        return <DefinicoesDeConta/>;
+        return <DefinicoesDeConta />;
     }
-  }
+  };
 
   return <div>
-    <h1 id="title">Definições</h1>
-    <TabPanel handleChange={handleChange} />
+    <h1 className="title">Definições</h1>
+    <TabPanel handleChange={handleChange} value={value} />
     {checkValue(value)}
   </div>;
 };

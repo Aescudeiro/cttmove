@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+#form-container label{
+    font-weight: 600;
+}
+
 .inputs-xs{
     display:flex;
     justify-content: space-between;
@@ -13,17 +17,18 @@
     width: 48%;
 }
 
+.label{
+    margin: 1rem 0 0.5rem 0;
+}
+
 input:focus {
-    background-color: rgba(221, 221, 221, 0.75);
+    background-color: rgb(245, 245, 245);
     outline: none !important;
     border:1px solid red;
-    box-shadow: 0 0 5px #719eceaf; 
-    border: 1px solid rgb(245, 82, 82);
+    box-shadow: 0 0 2px #719eceaf; 
+    border: 0.5px solid rgb(245, 82, 82);
   }
 
-form input[type="text"] {
-    padding-left: 0.5rem;
-}
 
 #button-container{
     display: flex;
@@ -42,5 +47,7 @@ form input[type="text"] {
     padding: 0.6rem;
     border-radius: 5px;
   }
-
-  
+/* 
+  input[type=text]{
+      padding: 0 0 0 0.5rem;
+  } */

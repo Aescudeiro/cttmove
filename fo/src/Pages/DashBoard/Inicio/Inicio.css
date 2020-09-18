@@ -1,0 +1,10 @@
+.inicio-title {
+  color: #f00000;
+}
+
+.cards {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: row;
+  justify-content: center;
+}

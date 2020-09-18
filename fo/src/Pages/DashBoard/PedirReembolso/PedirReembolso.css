@@ -1,0 +1,8 @@
+.refund-container p {
+    color: grey;
+}
+
+.refund-container h5{
+    margin: 1.5rem 0 0.5rem 0;
+    color: rgb(53, 53, 53);
+}

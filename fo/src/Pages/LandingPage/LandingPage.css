@@ -1,34 +1,25 @@
 .flex-container {
   display: flex;
-  height: inherit;
+  align-items: center;
+  height: 100%;
 }
 
-.picture {
-  background-image: url("../../Assets/new-picture.jpg");
-  flex-grow: 1;
-  height: inherit;
-  background-position: center;
+.landing-picture {
+  background-image: url("../../Assets/sucess-image.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.white-bg {
-  width: 20%;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.white-bg h1 {
+.flex-container h1 {
   position: relative;
-  margin-left: 4rem;
+  color: rgb(32, 32, 32);
   font-size: 3.5rem;
+  margin: 0 2rem;
+  z-index: 3;
 }
 
-.white-bg button {
-  position: absolute;
-  margin: 0 0 0 4rem;
+.flex-container button {
+  margin: 1rem 0 0 2rem;
   color: white;
   padding: 1rem 1.5rem;
   background-color: #f00000;

@@ -15,8 +15,8 @@ export default function DisabledTabs(props) {
         onChange={props.handleChange}
         aria-label="disabled tabs example"
       >
-        <Tab label="Dados do Usuários"/>
-        <Tab label="Métodos de pagamento"/>
+        <Tab label="Dados do Usuário"/>
+        <Tab label="Métodos de Pagamento"/>
         <Tab label="Definições de Conta"/>
       </Tabs>
     </Paper>

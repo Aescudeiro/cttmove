@@ -9,29 +9,29 @@ const DadosDoUsuário = () => {
 
   return (
     <form id="form-container">
-      <label>Nome Completo</label>
+      <label className="label">Nome Completo</label>
       <input type="text" value={user.fullName}></input>
 
-      <label>Data de Nascimento</label>
+      <label className="label">Data de Nascimento</label>
       <input type="text" value={user.birthDate}></input>
 
-      <label>Morada Fiscal</label>
+      <label className="label">Morada Fiscal</label>
       <input type="text" value={user.taxAddress}></input>
 
       <div className="inputs-xs">
-        <div>
+        <div className="label">
           <label>Código Postal</label>
           <input type="text" value={user.postCode}></input>
         </div>
-        <div id="location">
-          <label>Localidade</label>
+        <div className="label">
+          <label >Localidade</label>
           <input type="text" value={user.location}></input>
         </div>
-        <div>
+        <div className="label">
           <label>NIF</label>
           <input type="text" value={user.nif}></input>
         </div>
-        <div id="cc">
+        <div className="label">
           <label >Nº Cartão de Cidadão</label>
           <input type="text" value={user.ccNumber}></input>
         </div>

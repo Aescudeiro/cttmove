@@ -1,34 +1,36 @@
-#password{
-    display: flex;
-    justify-content: space-between;
-    margin: 0.5rem 0;
+#password {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0;
 }
 
-#password h4{
-    margin:0;
-    font-size: 0.8rem;
-    color: red;
-    text-decoration: underline;
-    cursor: pointer;
+#password-group {
+  padding: 2rem 0;
 }
 
-#close-account{
-    display: flex;
-    justify-content: space-between;
+#password h4 {
+  margin: 0;
+  color: red;
+  text-decoration: underline;
+  cursor: pointer;
+}
+#close-account {
+  display: flex;
+  justify-content: space-between;
 }
 
-#close-account h2{
-    margin: 0;
+#close-account h2 {
+  margin: 0.5rem 0;
 }
 
-#close-account button{
-    width: 8rem;
-    height: 2.5rem;
-    align-self: center;
-    background-color: red;
-    border-radius: 5px;
-    border: none;
-    color: white;
-    cursor: pointer;
-    font-weight: 600;
+#close-account button {
+  width: 8rem;
+  height: 2.5rem;
+  align-self: center;
+  background-color: red;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
 }

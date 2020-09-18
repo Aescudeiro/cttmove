@@ -18,7 +18,7 @@ const SideMenu = (props) => {
     <div className="side-menu">
       <div className="side-menu-options">
         <Link to="/" onClick={() => setPathName("/")}>
-          <img src={cttLogo}></img>
+          <img alt="" src={cttLogo}></img>
         </Link>
         <ul id="list">
           <li>

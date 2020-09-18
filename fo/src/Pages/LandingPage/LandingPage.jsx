@@ -1,23 +1,17 @@
 import React from "react";
 import "./LandingPage.css";
 import LandingHeader from "../../Components/LandingHeader/LandingHeader";
+import image from "../../Assets/new-picture.jpg";
 
 const LandingPage = () => {
   return (
     <>
       <LandingHeader />
-      <div className="flex-container">
-        <div className="white-bg">
-          <div>
+      <div className="flex-container landing-picture">
             <div>
-              <h1>Simplificámos o processo de reembolso.</h1>
-            </div>
-            <div>
+              <h1>Simplificámos o <br></br>processo de <br></br>reembolso.</h1>
               <button>Saber Mais </button>
-            </div>
           </div>
-        </div>
-        <div className="picture"></div>
       </div>
     </>
   );
