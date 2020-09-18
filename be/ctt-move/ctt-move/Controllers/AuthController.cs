@@ -21,7 +21,7 @@ namespace cttMove.Controllers
         }
 
         [HttpPost("login")]
-        public IActionResult login ([FromBody] CttUser userData)
+        public async Task<ActionResult<dynamic>> login ([FromBody] CttUser userData)
         {
             CttUser loggedUser = authService.login(userData.Email, userData.Pass);
 
@@ -30,7 +30,14 @@ namespace cttMove.Controllers
                 return BadRequest();
             }
             loggedUser.Pass = ""; //Should improve this using DTOs;
-            return Ok(loggedUser);
+                
+            var token = TokenService.GenerateToken(loggedUser);
+
+            return Ok( new
+            {
+                user = loggedUser,
+                token = token
+            });
         }
 
         [HttpPost("register-email")]
