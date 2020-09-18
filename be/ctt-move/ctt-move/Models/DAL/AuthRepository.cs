@@ -33,16 +33,23 @@ namespace cttMove.Models.DAL
 
         public CttUser regsiterUserDetails (CttUser user)
         {
-            dbContext.Entry(this).CurrentValues.SetValues(new
+
+            CttUser persistedUser = getUser(user.Email);
+            
+            if (persistedUser == null)
             {
-                user.FullName,
-                user.BirthDate,
-                user.CcNumber,
-                user.Iban,
-                user.Locality,
-                user.Nif,
-                user.Phone
-            });
+                return null;
+            }
+
+            persistedUser.FullName = user.FullName.Trim();
+            persistedUser.BirthDate = user.BirthDate;
+            persistedUser.CcNumber = user.CcNumber;
+            persistedUser.Iban = user.Iban;
+            persistedUser.Locality = user.Locality.Trim();
+            persistedUser.Nif = user.Nif;
+            persistedUser.Phone = user.Phone;
+
+            dbContext.SaveChanges();
 
             return getUser(user.Email);
         }
