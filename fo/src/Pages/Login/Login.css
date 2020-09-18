@@ -1,26 +1,27 @@
 .login-container {
   display: flex;
+  height: inherit;
 }
 
-.picture {
-  background-image: url("../../Assets/new-picture.jpg");
-  width: 50%;
-  height: 100vh;
-}
-
-.form {
-  width: 50%;
-  margin: auto;
+.login-container img {
+  width: 100%;
+  height: 100%;
 }
 
 form{
-    padding: 18%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+.form-row{
+  margin: 1rem 0;
 }
 
 .form p {
   color: grey;
   font-size: 0.8rem;
   text-align: center;
+  margin-top: 1rem;
 }
 
 .form button {
@@ -57,11 +58,17 @@ input::placeholder{
 .form h5{
     color: grey;
     font-weight: 400;
+    margin: 0 0 1rem 0;
+}
+
+.form h1 {
+  margin: 0;
 }
 
 #forgot-password {
     color: red;
     cursor: pointer;
+    margin: 0;
 }
 
 #aqui-word{
@@ -73,7 +80,7 @@ input::placeholder{
     font-weight: 600;
 }
 
-#message{
+.message{
     font-size: 0.7rem;
     color: red;
     margin-top: 0.5rem;

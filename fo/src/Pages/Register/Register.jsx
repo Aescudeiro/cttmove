@@ -7,6 +7,7 @@ import { isEmail } from "validator";
 import { Link } from "react-router-dom";
 import { FaCheck, FaChevronRight } from "react-icons/fa";
 import $ from "jquery";
+import picture from "../../Assets/computer.jpg"
 
 import AuthService from "../../services/auth-service";
 import { Step } from "@material-ui/core";
@@ -110,7 +111,7 @@ const Register = (props) => {
   return (
     <div className="register-container">
 
-      <div className="picture"></div>
+      <img src={picture}></img>
 
 
       <div className="register-form">

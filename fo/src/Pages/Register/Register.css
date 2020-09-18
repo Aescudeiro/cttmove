@@ -6,10 +6,10 @@
     width: 50%;
 }
 
-.picture{
-    background-image: url("../../Assets/sucess-image.jpg");
+.register-container img{
     width: 50%;
   }
+
 
   #gov-button {
     width: 100%;
