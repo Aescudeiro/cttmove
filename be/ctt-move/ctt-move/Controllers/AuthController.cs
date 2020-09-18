@@ -1,5 +1,6 @@
 ﻿using cttMove.Models.Db;
 using cttMove.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -54,6 +55,7 @@ namespace cttMove.Controllers
         }
 
         [HttpPost("register-details")]
+        [Authorize]
         public IActionResult registerUserDetails([FromBody] CttUser user)
         {
             authService.regsiterUserDetails(user);
