@@ -45,7 +45,7 @@ namespace cttMove.Controllers
         {
             bool isEmailFree = authService.registerNewEmail(user.Email, user.Pass);
             
-            if (!isEmailFree)
+            if (isEmailFree)
             {
                 return BadRequest();
             }

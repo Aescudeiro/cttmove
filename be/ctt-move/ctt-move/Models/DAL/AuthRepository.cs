@@ -28,6 +28,7 @@ namespace cttMove.Models.DAL
                 Email = email,
                 Pass = password
             });
+            dbContext.SaveChanges();
         }
 
         public CttUser regsiterUserDetails (CttUser user)
