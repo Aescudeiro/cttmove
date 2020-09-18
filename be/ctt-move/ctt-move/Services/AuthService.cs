@@ -48,6 +48,11 @@ namespace cttMove.Services
             return true;
         }
 
+        public CttUser regsiterUserDetails (CttUser user)
+        {
+            return _authRepository.regsiterUserDetails(user);
+        }
+
         //TODO: This should be a separate class. It's an utility service
         private string hash(string password, int iterations)
         {

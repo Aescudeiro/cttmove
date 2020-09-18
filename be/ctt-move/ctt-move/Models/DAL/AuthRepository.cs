@@ -29,5 +29,21 @@ namespace cttMove.Models.DAL
                 Pass = password
             });
         }
+
+        public CttUser regsiterUserDetails (CttUser user)
+        {
+            dbContext.Entry(this).CurrentValues.SetValues(new
+            {
+                user.FullName,
+                user.BirthDate,
+                user.CcNumber,
+                user.Iban,
+                user.Locality,
+                user.Nif,
+                user.Phone
+            });
+
+            return getUser(user.Email);
+        }
     }
 }

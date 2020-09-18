@@ -47,9 +47,10 @@ namespace cttMove.Controllers
         }
 
         [HttpPost("register-details")]
-        public IActionResult registerDetails([FromBody] CttUser user)
+        public IActionResult registerUserDetails([FromBody] CttUser user)
         {
-
+            authService.regsiterUserDetails(user);
+            return Ok(user);
         }
     }
 }
