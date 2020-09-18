@@ -1,7 +1,6 @@
 import axios from "axios";
 
-const API_URL =
-  "http://ec2-13-58-153-19.us-east-2.compute.amazonaws.com:8080/api/auth/";
+const API_URL = "https://localhost:5001/api/auth/";
 
 const register = (
   fullName,
@@ -28,18 +27,16 @@ const register = (
 };
 
 const login = (email, password) => {
-  return axios
-    .post(API_URL + "signin", {
-      email,
-      password,
-    })
-    .then((response) => {
-      if (response.data.accessToken) {
-        localStorage.setItem("user", JSON.stringify(response.data));
-      }
-
-      return response.data;
-    });
+  const login = {
+    email: email,
+    pass: password,
+  };
+  return axios.post(API_URL + "login", login).then((response) => {
+    if (response.data.token) {
+      localStorage.setItem("user", JSON.stringify(response.data));
+    }
+    return response.data;
+  });
 };
 
 const logout = () => {
