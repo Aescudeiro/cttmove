@@ -25,9 +25,6 @@ input:focus {
     border: 1px solid rgb(245, 82, 82);
   }
 
-form input[type="text"] {
-    padding-left: 0.5rem;
-}
 
 #button-container{
     display: flex;

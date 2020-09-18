@@ -6,8 +6,8 @@
     width: 50%;
 }
 
-.pic{
-    background-image: url("../../Assets/computer.jpg");
+.picture{
+    background-image: url("../../Assets/sucess-image.jpg");
     width: 50%;
   }
 
@@ -24,7 +24,7 @@
     cursor: pointer;
 }
 
-#continuar-button{
+#continuar-button, #completar-button{
     display:flex;
     align-items: center;
     justify-content: space-evenly;
@@ -42,6 +42,13 @@
     background-color: red;
     color: white;
     cursor: pointer;
+}
+
+#completar-button{
+    background-color: red;
+    color: white;
+    padding: 0.5rem 1rem;
+
 }
 
 .register-container h6{
@@ -63,6 +70,71 @@ input{
     font-size: 0.8rem;
 }
 
-.hide{
-    display: none;
-}
+
+/* Final Step */
+#voltar-button {
+    width: 100%;
+    background-color: red;
+    border-radius: 5px;
+    border: 0;
+    padding: 0.5rem;
+    margin: 1rem 0;
+  }
+  
+  .final-step-container a {
+    text-decoration: none;
+    color: white;
+  }
+  .final-step-container {
+    text-align: center;
+  }
+  
+  .final-step-container h2 {
+    font-size: 1.35rem;
+    margin: 0;
+  }
+  
+  .final-step-container h2{
+      margin: 2rem 0 0 0;
+  }
+  .final-step-container h5{
+      margin-top: 0.5rem;
+      color: grey;
+  }
+  
+  #nif-and-cc-container{
+      display: flex;
+  }
+
+  #nif, #cc{
+   width: 50%;
+  }
+
+  #cc{
+      padding-left: 1rem;
+  }
+
+  #step4{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  #step2{
+      justify-content: space-between;
+  }
+
+  #form{
+    padding: 10% 18%;
+  }
+
+  .bottom-text span{
+      color: red;
+      font-weight: 600;
+      text-decoration: underline;
+  }
+
+  .bottom-text{
+      padding-top: 10%;
+      text-align: center;
+  }
