@@ -12,3 +12,11 @@
 .text-container {
   padding: 20px;
 }
+
+.card-title {
+  font-size: 20px;
+}
+
+.card h2 {
+  font-size: 35px;
+}
