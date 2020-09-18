@@ -23,7 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="594e145f-e2ad-44d8-90de-0d5bb5d014cc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/ctt-move/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ctt-move/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ctt-move/Settings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ctt-move/Settings.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,11 +39,11 @@
         <option value="$PROJECT_DIR$/ctt-move/Models/Db/CttUserToken.cs" />
         <option value="$PROJECT_DIR$/ctt-move/Models/Db/ApplicationCttUser.cs" />
         <option value="$PROJECT_DIR$/ctt-move/Models/Db/CttMoveDbContext.cs" />
-        <option value="$PROJECT_DIR$/ctt-move/Settings.cs" />
         <option value="$PROJECT_DIR$/ctt-move/Services/TokenService.cs" />
         <option value="$PROJECT_DIR$/ctt-move/Startup.cs" />
         <option value="$PROJECT_DIR$/ctt-move/Properties/launchSettings.json" />
         <option value="$PROJECT_DIR$/ctt-move/Controllers/AuthController.cs" />
+        <option value="$PROJECT_DIR$/ctt-move/Settings.cs" />
       </list>
     </option>
   </component>
@@ -142,22 +142,22 @@
       <screen x="54" y="27" width="1866" height="1053" />
     </state>
     <state x="300" y="59" width="1084" height="839" key="#com.intellij.execution.impl.EditConfigurationsDialog/54.27.1866.1053@54.27.1866.1053" timestamp="1600452645971" />
-    <state width="1820" height="201" key="GridCell.Tab.0.bottom" timestamp="1600453558924">
+    <state width="1820" height="201" key="GridCell.Tab.0.bottom" timestamp="1600453720333">
       <screen x="54" y="27" width="1866" height="1053" />
     </state>
-    <state width="1820" height="201" key="GridCell.Tab.0.bottom/54.27.1866.1053@54.27.1866.1053" timestamp="1600453558924" />
-    <state width="1820" height="201" key="GridCell.Tab.0.center" timestamp="1600453558923">
+    <state width="1820" height="201" key="GridCell.Tab.0.bottom/54.27.1866.1053@54.27.1866.1053" timestamp="1600453720333" />
+    <state width="1820" height="201" key="GridCell.Tab.0.center" timestamp="1600453720333">
       <screen x="54" y="27" width="1866" height="1053" />
     </state>
-    <state width="1820" height="201" key="GridCell.Tab.0.center/54.27.1866.1053@54.27.1866.1053" timestamp="1600453558923" />
-    <state width="1820" height="201" key="GridCell.Tab.0.left" timestamp="1600453558922">
+    <state width="1820" height="201" key="GridCell.Tab.0.center/54.27.1866.1053@54.27.1866.1053" timestamp="1600453720333" />
+    <state width="1820" height="201" key="GridCell.Tab.0.left" timestamp="1600453720332">
       <screen x="54" y="27" width="1866" height="1053" />
     </state>
-    <state width="1820" height="201" key="GridCell.Tab.0.left/54.27.1866.1053@54.27.1866.1053" timestamp="1600453558922" />
-    <state width="1820" height="201" key="GridCell.Tab.0.right" timestamp="1600453558924">
+    <state width="1820" height="201" key="GridCell.Tab.0.left/54.27.1866.1053@54.27.1866.1053" timestamp="1600453720332" />
+    <state width="1820" height="201" key="GridCell.Tab.0.right" timestamp="1600453720333">
       <screen x="54" y="27" width="1866" height="1053" />
     </state>
-    <state width="1820" height="201" key="GridCell.Tab.0.right/54.27.1866.1053@54.27.1866.1053" timestamp="1600453558924" />
+    <state width="1820" height="201" key="GridCell.Tab.0.right/54.27.1866.1053@54.27.1866.1053" timestamp="1600453720333" />
     <state x="476" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1600448644153">
       <screen x="54" y="27" width="1866" height="1053" />
     </state>
@@ -177,7 +177,20 @@
               <option value="662" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="5" />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/ctt-move/Controllers/AuthController.cs</url>
+          <line>33</line>
+          <properties documentPath="$PROJECT_DIR$/ctt-move/Controllers/AuthController.cs" initialLine="33">
+            <startOffsets>
+              <option value="862" />
+            </startOffsets>
+            <endOffsets>
+              <option value="913" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
