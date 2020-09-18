@@ -15,7 +15,7 @@ namespace cttMove.Models.DAL
             this.dbContext = new CttMoveDbContext();
         }
 
-        public Refund getRefund (int id)
+        public Refund getRefundbyId (int id)
         {
             return dbContext.Refund.Where(r => r.Id == id).FirstOrDefault();
         }

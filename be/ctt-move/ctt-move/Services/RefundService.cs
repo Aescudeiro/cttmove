@@ -20,5 +20,10 @@ namespace cttMove.Services
         {
             return _refundRepository.createRefund(refund);
         }
+
+        public List<Refund> getUserRefundLst(string userEmail)
+        {
+            return _refundRepository.getUserRefundLst(userEmail);
+        }
     }
 }

@@ -30,5 +30,12 @@ namespace cttMove.Controllers
             return Ok();
         }
 
+        [Authorize]
+        [HttpPost("refund-list")]
+        public IActionResult getUserRefundLst([FromBody] string userEmail)
+        {
+            List<Refund> refundLst = refundService.getUserRefundLst(userEmail);
+            return Ok();
+        }
     }
 }
