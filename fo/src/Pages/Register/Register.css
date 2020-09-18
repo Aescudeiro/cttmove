@@ -2,15 +2,26 @@
     display: flex;
 }
 
-#gov-button {
-    border-radius: 0;
-    background-color: rgb(69, 104, 180);
-    font-weight: 300;
-    font-size: 0.8rem;
+.register-form{
+    width: 50%;
 }
 
-form{
-    padding: 0 10%;
+.pic{
+    background-image: url("../../Assets/computer.jpg");
+    width: 50%;
+  }
+
+  #gov-button {
+    width: 100%;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    border-radius: 3px;
+    border: none;
+    background-color: rgb(69, 104, 180);
+    color: white;
+    font-weight: 300;
+    font-size: 0.8rem;
+    cursor: pointer;
 }
 
 #continuar-button{
@@ -23,23 +34,35 @@ form{
     width: 30%;
     margin-left: 70%;
     padding: 0.5rem;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
+    border-radius: 3px;
 }
-
 
 #continuar-button:hover{
-    color: white;
     background-color: red;
-    border: 1px solid red;
+    color: white;
+    cursor: pointer;
 }
 
-p span {
+.register-container h6{
+    margin: 0;
     color: red;
-    text-decoration: underline;
-    font-weight: 600;
+    
 }
 
-#question{
-    margin-top: 10%;
+input{
+    margin: 0;
 }
 
+.register-form div{
+    margin: 0.5rem 0;
+}
+
+#subtitle{
+    color: grey;
+    font-size: 0.8rem;
+}
+
+.hide{
+    display: none;
+}

@@ -1,30 +1,30 @@
 import React, { useState, useRef } from "react";
+import "./Register.css";
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 import { isEmail } from "validator";
+import $ from "jquery";
 
 import AuthService from "../../services/auth-service";
 
 const required = (value) => {
   if (!value) {
     return (
-      <div className="alert alert-danger" role="alert">
-        This field is required!
-      </div>
+      <h6 className="alert alert-danger" role="alert">Campo Obrigatório.</h6>
     );
   }
 };
 
 const validEmail = (value) => {
   if (!isEmail(value)) {
-    return <div>This is not a valid email.</div>;
+    return <h6>Email inválido.</h6>;
   }
 };
 
 const vpassword = (value) => {
   if (value.length < 6 || value.length > 40) {
-    return <div>The password must be between 6 and 40 characters.</div>;
+    return <h6>A password deve conter entre 6 e 40 caracteres.</h6>;
   }
 };
 
@@ -42,7 +42,7 @@ const Register = (props) => {
   const [postCode, setPostCode] = useState("");
   const [location, setLocation] = useState("");
   const [message, setMessage] = useState("");
-
+  const [hide, setHide] = useState(false)
   const onChange = (e, setter) => {
     setter(e.target.value);
   };
@@ -83,43 +83,70 @@ const Register = (props) => {
     }
   };
 
+  const handleClick = () =>{
+    $('.register-form').addClass("hide");
+  }
+
   return (
-    <Form onSubmit={handleRegister} ref={form}>
-      <div>
-        <div>
-          <label htmlFor="fullName">Full Name</label>
-          <Input
-            type="text"
-            name="fullName"
-            value={fullName}
-            onChange={(e) => onChange(e, setFullName)}
-            validations={[required]}
-          />
-        </div>
+    <div className="register-container">
+     <div className="pic"></div>
+      <div className="register-form">
+        <Form onSubmit={handleRegister} ref={form}>
+          <h1>Criar Conta</h1>
+          <p id="subtitle">
+            Registe-se e descubra as vantagens que os CTT move lhe podem
+            oferecer.
+          </p>
+          <button id="gov-button">AUTENTICAÇÃO.GOV</button>
+ 
+            <div>
+              <label htmlFor="fullName">Nome Completo</label>
+              <Input
+                type="text"
+                name="fullName"
+                value={fullName}
+                onChange={(e) => onChange(e, setFullName)}
+                validations={[required]}
+              />
+            </div>
 
-        <div>
-          <label htmlFor="email">Email</label>
-          <Input
-            type="text"
-            name="email"
-            value={email}
-            onChange={(e) => onChange(e, setEmail)}
-            validations={[required, validEmail]}
-          />
-        </div>
+            <div>
+              <label htmlFor="email">Email</label>
+              <Input
+                type="text"
+                name="email"
+                value={email}
+                onChange={(e) => onChange(e, setEmail)}
+                validations={[required, validEmail]}
+              />
+            </div>
 
-        <div>
-          <label htmlFor="password">Password</label>
-          <Input
-            type="password"
-            name="password"
-            value={password}
-            onChange={(e) => onChange(e, setPassword)}
-            validations={[required, vpassword]}
-          />
-        </div>
+            <div>
+              <label htmlFor="password">Password</label>
+              <Input
+                type="password"
+                name="password"
+                value={password}
+                onChange={(e) => onChange(e, setPassword)}
+                validations={[required, vpassword]}
+              />
+            </div>
 
-        <div>
+            <div>
+              <button id="continuar-button" onClick={() => setHide(true)}>Continuar</button>
+            </div>
+          {message}
+          <CheckButton style={{ display: "none" }} ref={checkBtn} />
+        </Form>
+      </div>
+    </div>
+  );
+};
+
+export default Register;
+
+{
+  /* <div>
           <label htmlFor="birthDate">Data de nascimento</label>
           <Input
             type="text"
@@ -183,16 +210,5 @@ const Register = (props) => {
             onChange={(e) => onChange(e, setLocation)}
             validations={[required]}
           />
-        </div>
-
-        <div>
-          <button>Sign Up</button>
-        </div>
-      </div>
-      {message}
-      <CheckButton style={{ display: "none" }} ref={checkBtn} />
-    </Form>
-  );
-};
-
-export default Register;
+        </div> */
+}
