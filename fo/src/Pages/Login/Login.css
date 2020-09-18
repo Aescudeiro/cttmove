@@ -13,8 +13,8 @@ form{
     flex-direction: column;
   }
   
-.form-row{
-  margin: 1rem 0;
+.form-row div{
+  margin: 0.5rem 0 1.5rem 0;
 }
 
 .form p {

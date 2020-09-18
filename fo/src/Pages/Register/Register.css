@@ -1,140 +1,146 @@
-.register-container{
-    display: flex;
+.register-container {
+  display: flex;
 }
 
-.register-form{
-    width: 50%;
+.register-form {
+  width: 50%;
 }
 
-.register-container img{
-    width: 50%;
-  }
-
-
-  #gov-button {
-    width: 100%;
-    margin: 1rem 0;
-    padding: 0.5rem;
-    border-radius: 3px;
-    border: none;
-    background-color: rgb(69, 104, 180);
-    color: white;
-    font-weight: 300;
-    font-size: 0.8rem;
-    cursor: pointer;
+.register-container img {
+  width: 50%;
 }
 
-#continuar-button, #completar-button{
-    display:flex;
-    align-items: center;
-    justify-content: space-evenly;
-    color: red;
-    background-color: white;
-    border: 1px solid red;
-    width: 30%;
-    margin-left: 70%;
-    padding: 0.5rem;
-    margin-top: 1rem;
-    border-radius: 3px;
-}
-
-#continuar-button:hover{
-    background-color: red;
-    color: white;
-    cursor: pointer;
-}
-
-#completar-button{
-    background-color: red;
-    color: white;
-    padding: 0.5rem 1rem;
-
-}
-
-.register-container h6{
-    margin: 0;
-    color: red;
-    
-}
-
-input{
+#form h1{
     margin: 0;
 }
 
-.register-form div{
-    margin: 0.5rem 0;
+#gov-button {
+  width: 100%;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  border-radius: 3px;
+  border: none;
+  background-color: rgb(69, 104, 180);
+  color: white;
+  font-weight: 300;
+  font-size: 0.8rem;
+  cursor: pointer;
 }
 
-#subtitle{
-    color: grey;
-    font-size: 0.8rem;
+#continuar-button,
+#completar-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: red;
+  background-color: white;
+  border: 1px solid red;
+  width: 30%;
+  margin-left: 70%;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  border-radius: 3px;
 }
 
+#continuar-button:hover {
+  background-color: red;
+  color: white;
+  cursor: pointer;
+}
+
+#completar-button {
+  background-color: red;
+  color: white;
+  padding: 0.5rem 1rem;
+}
+
+.register-container h6 {
+  margin: 0;
+  color: red;
+}
+
+input {
+  margin: 0;
+}
+
+.register-form div {
+  margin: 0.5rem 0;
+}
+
+#subtitle {
+  color: grey;
+  font-size: 0.8rem;
+  margin-top: 0;
+}
 
 /* Final Step */
 #voltar-button {
-    width: 100%;
-    background-color: red;
-    border-radius: 5px;
-    border: 0;
-    padding: 0.5rem;
-    margin: 1rem 0;
-  }
-  
-  .final-step-container a {
-    text-decoration: none;
-    color: white;
-  }
-  .final-step-container {
-    text-align: center;
-  }
-  
-  .final-step-container h2 {
-    font-size: 1.35rem;
-    margin: 0;
-  }
-  
-  .final-step-container h2{
-      margin: 2rem 0 0 0;
-  }
-  .final-step-container h5{
-      margin-top: 0.5rem;
-      color: grey;
-  }
-  
-  #nif-and-cc-container{
-      display: flex;
-  }
+  width: 100%;
+  background-color: red;
+  border-radius: 5px;
+  border: 0;
+  padding: 0.5rem;
+  margin: 1rem 0;
+}
 
-  #nif, #cc{
-   width: 50%;
-  }
+.final-step-container a {
+  text-decoration: none;
+  color: white;
+}
+.final-step-container {
+  text-align: center;
+}
 
-  #cc{
-      padding-left: 1rem;
-  }
+.final-step-container h2 {
+  font-size: 1.35rem;
+  margin: 0;
+}
 
-  #step4{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  }
+.final-step-container h2 {
+  margin: 2rem 0 0 0;
+}
+.final-step-container h5 {
+  margin-top: 0.5rem;
+  color: grey;
+}
 
-  #step2{
-      justify-content: space-between;
-  }
+#nif-and-cc-container {
+  display: flex;
+}
 
-  #form{
-    padding: 10% 18%;
-  }
+#nif,
+#cc {
+  width: 50%;
+}
 
-  .bottom-text span{
-      color: red;
-      font-weight: 600;
-      text-decoration: underline;
-  }
+#cc {
+  padding-left: 1rem;
+}
 
-  .bottom-text{
-      padding-top: 10%;
-      text-align: center;
-  }
+#step4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#step2 {
+  justify-content: space-between;
+}
+
+#form {
+  height: 100%;
+  padding: 10% 18%;
+}
+
+.bottom-text {
+  color: grey;
+  font-size: 0.8rem;
+  text-align: center;
+}
+.bottom-text span a {
+  color: red;
+}
+
+.bottom-text span a:hover {
+    font-weight: 600;
+}

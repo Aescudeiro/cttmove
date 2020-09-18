@@ -7,7 +7,7 @@ import { isEmail } from "validator";
 import { Link } from "react-router-dom";
 import { FaCheck, FaChevronRight } from "react-icons/fa";
 import $ from "jquery";
-import picture from "../../Assets/computer.jpg"
+import picture from "../../Assets/computer.jpg";
 
 import AuthService from "../../services/auth-service";
 import { Step } from "@material-ui/core";
@@ -16,25 +16,27 @@ import button from "react-validation/build/button";
 const required = (value) => {
   if (!value) {
     return (
-      <h6 className="alert alert-danger" role="alert">Campo Obrigatório.</h6>
+      <h6 className="alert alert-danger" role="alert">
+        Campo Obrigatório.
+      </h6>
     );
   }
 };
 
 const validEmail = (value) => {
   if (!isEmail(value)) {
-    $("#continuar-button").attr("disabled")
+    $("#continuar-button").attr("disabled");
     return <h6>Email inválido.</h6>;
   }
-  $("#continuar-button").removeAttr("disabled")
+  $("#continuar-button").removeAttr("disabled");
 };
 
 const vpassword = (value) => {
   if (value.length < 6 || value.length > 40) {
-    $("#continuar-button").attr("disabled")
+    $("#continuar-button").attr("disabled");
     return <h6>A password deve conter entre 6 e 40 caracteres.</h6>;
   }
-  $("#continuar-button").removeAttr("disabled")
+  $("#continuar-button").removeAttr("disabled");
 };
 
 const Register = (props) => {
@@ -51,7 +53,7 @@ const Register = (props) => {
   const [postCode, setPostCode] = useState("");
   const [location, setLocation] = useState("");
   const [message, setMessage] = useState("");
-  const [show, setShow] = useState("step1")
+  const [show, setShow] = useState("step1");
   const onChange = (e, setter) => {
     setter(e.target.value);
   };
@@ -91,37 +93,35 @@ const Register = (props) => {
       );
     }
 
-    setShow("step4")
+    setShow("step4");
   };
 
   const handleClick = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     if (show === "step1") {
       if (!email || !password) return;
-      setShow("step2")
+      setShow("step2");
     } else if (show === "step2") {
       if (!fullName || !birthDate || !nif || !ccNumber) return;
-      setShow("step3")
+      setShow("step3");
     } else if (show === "step3") {
       if (!taxAddress || !postCode || !location) return;
-      setShow("step4")
+      setShow("step4");
     }
-  }
+  };
 
   return (
     <div className="register-container">
-
       <img src={picture}></img>
 
-
       <div className="register-form">
-        <Form ref={form} id="form" >
+        <Form ref={form} id="form">
           <div style={{ display: show === "step4" ? "none" : null }}>
             <h1>Criar Conta</h1>
             <p id="subtitle">
               Registe-se e descubra as vantagens que os CTT move lhe podem
               oferecer.
-          </p>
+            </p>
             <button id="gov-button">AUTENTICAÇÃO.GOV</button>
           </div>
 
@@ -149,7 +149,6 @@ const Register = (props) => {
                 validations={[required, vpassword]}
               />
             </div>
-
           </div>
 
           <div id="step2" style={{ display: show === "step2" ? null : "none" }}>
@@ -198,10 +197,7 @@ const Register = (props) => {
                 />
               </div>
             </div>
-
-
           </div>
-
 
           <div id="step3" style={{ display: show === "step3" ? null : "none" }}>
             <h5>STEP 3/3</h5>
@@ -238,8 +234,6 @@ const Register = (props) => {
                 validations={[required]}
               />
             </div>
-
-
           </div>
           <div id="step4" style={{ display: show === "step4" ? null : "none" }}>
             <div className="final-step-container">
@@ -253,31 +247,40 @@ const Register = (props) => {
             </div>
           </div>
 
-          {show !== "step3" && show !== "step4" ?
-            <button id="continuar-button" onClick={(e) => handleClick(e)}>Continuar<FaChevronRight /></button>
-            : show === "step4" ?
-              null
-              :
-              <button id="completar-button" onClick={(e) => { handleRegister(e) }}>Completar Registo<FaChevronRight /></button>
-          }
+          {show !== "step3" && show !== "step4" ? (
+            <button id="continuar-button" onClick={(e) => handleClick(e)}>
+              Continuar
+              <FaChevronRight />
+            </button>
+          ) : show === "step4" ? null : (
+            <button
+              id="completar-button"
+              onClick={(e) => {
+                handleRegister(e);
+              }}
+            >
+              Completar Registo
+              <FaChevronRight />
+            </button>
+          )}
 
-          <div className="bottom-text" style={{ display: show === "step4" ? "none" : null }}>
-            <p>Já tem conta?<span>
-              <Link to="/login">
-
-                Entre aqui.
-               </Link>
-            </span></p>
+          <div
+            className="bottom-text"
+            style={{ display: show !== "step1" ? "none" : null }}
+          >
+            <p>
+              Já tem conta?{" "}
+              <span>
+                <Link to="/login">Entre aqui.</Link>
+              </span>
+            </p>
           </div>
-
 
           {message}
           <CheckButton style={{ display: "none" }} ref={checkBtn} />
         </Form>
-
       </div>
-
-    </div >
+    </div>
   );
 };
 

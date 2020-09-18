@@ -24,7 +24,7 @@ const Definicoes = () => {
   };
 
   return <div>
-    <h1 id="title">Definições</h1>
+    <h1 className="title">Definições</h1>
     <TabPanel handleChange={handleChange} value={value} />
     {checkValue(value)}
   </div>;

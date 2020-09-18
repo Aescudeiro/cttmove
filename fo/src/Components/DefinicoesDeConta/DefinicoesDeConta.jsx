@@ -17,7 +17,7 @@ const DefinicoesDeConta = () => {
     <>
       <form id="form-container">
         <div className="inputs-xs">
-          <div>
+          <div className="email-field">
             <label>Email</label>
             <input type="text" value={user.email}></input>
           </div>
@@ -26,7 +26,7 @@ const DefinicoesDeConta = () => {
             <input type="text" value={user.phone}></input>
           </div>
         </div>
-        <div>
+        <div id="password-group">
           <div id="password">
             <label>Password</label>
             <h4 onClick={handleClick}>Alterar password</h4>
@@ -37,7 +37,7 @@ const DefinicoesDeConta = () => {
 
         <div id="close-account">
           <div>
-            <h2 className="title">Fechar Conta</h2>
+            <h2>Fechar Conta</h2>
             <p className="description">
               Esta ação apagará todos os seus dados e detalhes permanentemente.
             </p>
