@@ -16,9 +16,24 @@ namespace cttMove.Services
             this._flightRepository = new FlightRepository();
         }
 
-        public void createFlight(Flight flight)
+        public Flight createFlight(Flight flight)
         {
-            _flightRepository.createFlight(flight);
+            return _flightRepository.createFlight(flight);
+        }
+
+        public Flight[] createFlight(Flight[] flightLst)
+        {
+            Flight[] persistedFlightLst = _flightRepository.createFlight(flightLst);
+
+            foreach (Flight f in persistedFlightLst)
+            {
+                if (f == null)
+                {
+                    return null;
+                }
+            }
+
+            return persistedFlightLst;
         }
     }
 }

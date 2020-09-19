@@ -59,10 +59,10 @@ namespace cttMove.Controllers
             
             if (isEmailFree)
             {
-                return BadRequest();
+                return Ok(0); //0 = No Error;
             }
 
-            return Ok();
+            return Ok(1); //1 = Error;
         }
 
         [HttpPost("register-user")]
