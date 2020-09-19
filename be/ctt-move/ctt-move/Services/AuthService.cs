@@ -36,7 +36,7 @@ namespace cttMove.Services
         public bool isEmailFree(string email)
         {
             CttUser user = _authRepository.getUser(email);
-            return user != null;
+            return user == null;
         }
             //string hashedPassword = hash(password);
             //_authRepository.registerNewEmail(email, hashedPassword);
@@ -52,6 +52,20 @@ namespace cttMove.Services
 
             user.Pass = hash(user.Pass);
             return _authRepository.registerUser(user);
+        }
+
+        public CttUser updateUser (CttUser user)
+        {
+
+            bool isNull = user.GetType().GetProperties()
+                            .All(p => p.GetValue(user) != null);
+
+            if (isNull)
+            {
+                return null;
+            }
+
+            return _authRepository.updateUser(user);
         }
 
         //TODO: This should be a separate class. It's an utility service
