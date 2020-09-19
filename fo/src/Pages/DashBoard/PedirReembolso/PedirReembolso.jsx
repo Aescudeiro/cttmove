@@ -1,46 +1,59 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./PedirReembolso.css";
-
-import Radio from '@material-ui/core/Radio';
-import RadioGroup from '@material-ui/core/RadioGroup';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import FormControl from '@material-ui/core/FormControl';
-import FormLabel from '@material-ui/core/FormLabel';
+import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
 
 //components
-import SoIda from "../../../Components/SoIda/SoIda.jsx";
-import IdaeVolta from "../../../Components/IdaeVolta/IdaeVolta.jsx";
-
+import FlightDetails from "../../../Components/FlightDetails/FlightDetails.jsx";
+import FileUpload from "../../../Components/FlightDetails/Steps/FileUpload.jsx";
+import PaymentMethod from "../../../Components/FlightDetails/Steps/PaymentMethod.jsx";
 
 const PedirReembolso = () => {
-  const [value, setValue] = useState("Ida e Volta");
-  function RadioButtonsGroup() {
-   
-    const handleChange = (event) => {
-      setValue(event.target.value);
-    };
-  
-    return (
-      <FormControl component="fieldset">
-        <RadioGroup aria-label="gender" name="gender1" value={value} onChange={handleChange}>
-          <FormControlLabel value="Ida e volta" control={<Radio />} label="Ida e Volta" />
-          <FormControlLabel value="Só ida" control={<Radio />} label="Só ida" />
-        </RadioGroup>
-      </FormControl>
-    );
-  }
-  
+  const [step, setStep] = useState(1);
+
+  const handleClick = () => {
+    setStep(step + 1);
+  };
+
+  const goBack = () => {
+    setStep(step - 1);
+  };
+
+  const ChooseStep = (step) => {
+    switch (step) {
+      case 1:
+        return <FlightDetails />;
+      case 2:
+        return <FileUpload />;
+      case 3:
+        return <PaymentMethod />;
+    }
+  };
+
   return (
-    <div className="refund-container">
-      <h1 className="title">Pedir Reembolso</h1>
-      <p>
-        Por favor preencha todos os campos correctamente. Em caso de erro,
-        contacte-nos na secção de Ajuda.
-      </p>
-      <h5>Seleccione uma opção:</h5>
-      <RadioButtonsGroup/>
-      {value === "Só ida" ? <SoIda/> : <IdaeVolta/>}
-    </div>
+    <>
+      <div className="refund-container">
+        <h1 className="title">Pedir Reembolso</h1>
+        <p>
+          Por favor preencha todos os campos correctamente. Em caso de erro,
+          contacte-nos na secção de Ajuda.
+        </p>
+      </div>
+      {ChooseStep(step)}
+      <div
+        className="buttons-container"
+        style={{ justifyContent: step === 1 ? "flex-end" : null }}
+      >
+        <button
+          onClick={goBack}
+          style={{ display: step === 1 ? "none" : null }}
+        >
+          <FaAngleLeft /> anterior
+        </button>
+        <button id="proximo-button" onClick={handleClick}>
+          próximo <FaAngleRight />
+        </button>
+      </div>
+    </>
   );
 };
 export default PedirReembolso;

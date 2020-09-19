@@ -1,8 +1,33 @@
 .refund-container p {
     color: grey;
+    margin:0;
 }
 
-.refund-container h5{
-    margin: 1.5rem 0 0.5rem 0;
-    color: rgb(53, 53, 53);
+.refund-container .title{
+    margin-bottom: 0;
 }
+
+
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+  
+  .buttons-container button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    color: red;
+    border-radius: 5px;
+    padding: 0.3rem 1rem;
+    border: 1px solid red;
+  }
+  
+  .buttons-container button:hover {
+    background-color: red;
+    color: white;
+    cursor: pointer;
+  }
+  

@@ -1,0 +1,30 @@
+.transferencia-bancaria,
+.levantamento-em-dinheiro {
+  border: 1px solid grey;
+  padding: 2.5rem;
+  border-radius: 5px;
+  border: 1px solid rgb(160, 160, 160);
+  margin: 0.75rem 0;
+  cursor: pointer;
+}
+
+.transferencia-bancaria:hover,
+.levantamento-em-dinheiro:hover {
+    box-shadow: 0px 0px 5px 5px rgb(238, 238, 238);
+    border: 1px solid red;
+}
+
+.payment-method-container p {
+  margin: 0;
+  color: grey;
+}
+
+.transferencia-bancaria h3,
+.levantamento-em-dinheiro h3 {
+  margin: 0.5rem 0;
+  color: rgb(73, 73, 73);
+}
+
+#refund-question {
+  margin: 3rem 0 1rem 0;
+}
