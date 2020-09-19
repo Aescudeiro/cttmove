@@ -52,10 +52,10 @@ namespace cttMove.Controllers
             });
         }
 
-        [HttpPost("register-email")]
-        public IActionResult register ([FromBody] CttUser user)
+        [HttpPost("verify-email")]
+        public IActionResult register ([FromBody] string email)
         {
-            bool isEmailFree = authService.registerNewEmail(user.Email, user.Pass);
+            bool isEmailFree = authService.isEmailFree(email);
             
             if (isEmailFree)
             {
@@ -65,12 +65,12 @@ namespace cttMove.Controllers
             return Ok();
         }
 
-        [HttpPost("register-details")]
+        [HttpPost("register-user")]
         [Authorize]
         public IActionResult registerUserDetails([FromBody] CttUser user)
         {
-            authService.regsiterUserDetails(user);
-            return Ok(user);
+            CttUser persistedUser = authService.registerUser(user);
+            return Ok(persistedUser);
         }
     }
 }

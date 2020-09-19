@@ -22,9 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="594e145f-e2ad-44d8-90de-0d5bb5d014cc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/ctt-move/Settings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ctt-move/Settings.cs" afterDir="false" />
-    </list>
+    <list default="true" id="594e145f-e2ad-44d8-90de-0d5bb5d014cc" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,8 +40,8 @@
         <option value="$PROJECT_DIR$/ctt-move/Services/TokenService.cs" />
         <option value="$PROJECT_DIR$/ctt-move/Startup.cs" />
         <option value="$PROJECT_DIR$/ctt-move/Properties/launchSettings.json" />
-        <option value="$PROJECT_DIR$/ctt-move/Controllers/AuthController.cs" />
         <option value="$PROJECT_DIR$/ctt-move/Settings.cs" />
+        <option value="$PROJECT_DIR$/ctt-move/Controllers/AuthController.cs" />
       </list>
     </option>
   </component>
@@ -117,7 +115,7 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -129,6 +127,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
@@ -168,7 +167,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/ctt-move/Controllers/AuthController.cs</url>
-          <line>25</line>
+          <line>24</line>
           <properties documentPath="$PROJECT_DIR$/ctt-move/Controllers/AuthController.cs" initialLine="25">
             <startOffsets>
               <option value="592" />
