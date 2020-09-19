@@ -31,24 +31,9 @@ namespace cttMove.Models.DAL
             dbContext.SaveChanges();
         }
 
-        public CttUser regsiterUserDetails (CttUser user)
+        public CttUser registerUser(CttUser user)
         {
-
-            CttUser persistedUser = getUser(user.Email);
-            
-            if (persistedUser == null)
-            {
-                return null;
-            }
-
-            persistedUser.FullName = user.FullName.Trim();
-            persistedUser.BirthDate = user.BirthDate;
-            persistedUser.CcNumber = user.CcNumber;
-            persistedUser.Iban = user.Iban;
-            persistedUser.Locality = user.Locality.Trim();
-            persistedUser.Nif = user.Nif;
-            persistedUser.Phone = user.Phone;
-
+            dbContext.Add(user);
             dbContext.SaveChanges();
 
             return getUser(user.Email);
