@@ -7,12 +7,14 @@
       <e p="ctt-move" t="IncludeRecursive">
         <e p="Controllers" t="Include">
           <e p="AuthController.cs" t="Include" />
+          <e p="DocumentController.cs" t="Include" />
           <e p="FlightController.cs" t="Include" />
           <e p="RefundController.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
           <e p="DAL" t="Include">
             <e p="AuthRepository.cs" t="Include" />
+            <e p="DocumentRepository.cs" t="Include" />
             <e p="FlightRepository.cs" t="Include" />
             <e p="RefundRepository.cs" t="Include" />
           </e>
@@ -40,6 +42,7 @@
         </e>
         <e p="Services" t="Include">
           <e p="AuthService.cs" t="Include" />
+          <e p="DocumentService.cs" t="Include" />
           <e p="FlightService.cs" t="Include" />
           <e p="RefundService.cs" t="Include" />
           <e p="TokenService.cs" t="Include" />

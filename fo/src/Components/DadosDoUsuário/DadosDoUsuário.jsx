@@ -1,11 +1,10 @@
 import React from "react";
 import "./DadosDoUsuário.css";
 
-import AuthService from "../../services/auth-service"
+import AuthService from "../../services/auth-service";
 
 const DadosDoUsuário = () => {
-
-  const user = AuthService.getCurrentUser()
+  const user = AuthService.getCurrentUser();
 
   return (
     <form id="form-container">
@@ -24,24 +23,23 @@ const DadosDoUsuário = () => {
           <input type="text" value={user.postCode}></input>
         </div>
         <div className="label">
-          <label >Localidade</label>
-          <input type="text" value={user.location}></input>
+          <label>Localidade</label>
+          <input type="text" value={user.locality}></input>
         </div>
         <div className="label">
           <label>NIF</label>
           <input type="text" value={user.nif}></input>
         </div>
         <div className="label">
-          <label >Nº Cartão de Cidadão</label>
+          <label>Nº Cartão de Cidadão</label>
           <input type="text" value={user.ccNumber}></input>
         </div>
         <div id="button-container">
-        <button>Guardar</button>
+          <button>Guardar</button>
         </div>
       </div>
-      
     </form>
-  )
+  );
 };
 
 export default DadosDoUsuário;
