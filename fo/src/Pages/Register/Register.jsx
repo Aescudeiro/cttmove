@@ -259,7 +259,7 @@ const Register = (props) => {
                 handleRegister(e);
               }}
             >
-              Completar Registo
+               Completar Registo
               <FaChevronRight />
             </button>
           )}

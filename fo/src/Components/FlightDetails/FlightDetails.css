@@ -1,0 +1,29 @@
+.flight-dates-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.flight-dates-container div {
+  width: 48%;
+}
+
+.flight-dates-container div p {
+  margin: 0.3rem 0;
+  font-size: 0.8rem;
+  color: black;
+}
+
+#option-select{
+  margin: 1.5rem 0 0.5rem 0;
+  color: rgb(53, 53, 53);
+}
+.detalhes-do-voo{
+  color: rgb(53, 53, 53);
+  margin: 2rem 0 0.5rem 0;
+}
+.recta{
+  margin: 0;
+}
+
