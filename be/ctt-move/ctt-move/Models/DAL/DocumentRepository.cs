@@ -6,6 +6,6 @@ using System.Threading.Tasks;
 namespace cttMove.Models.DAL
 {
     public class DocumentRepository
-{
-}
+    {
+    }
 }

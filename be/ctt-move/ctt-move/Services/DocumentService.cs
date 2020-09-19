@@ -6,6 +6,6 @@ using System.Threading.Tasks;
 namespace cttMove.Services
 {
     public class DocumentService
-{
-}
+    {
+    }
 }

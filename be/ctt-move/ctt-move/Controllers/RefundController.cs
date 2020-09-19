@@ -25,7 +25,7 @@ namespace cttMove.Controllers
         [Authorize]
         public IActionResult createRefund ([FromBody] Refund refund)
         {
-            refundService.createRefund(refund);
+            refundService.createRefund(refund);// CALCULATE THE REFUND VALUE
 
             return Ok();
         }
