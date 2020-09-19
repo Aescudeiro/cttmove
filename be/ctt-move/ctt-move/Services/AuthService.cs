@@ -45,7 +45,7 @@ namespace cttMove.Services
         {
             CttUser persistedUser = _authRepository.getUser(user.Email);
 
-            if (persistedUser == null)
+            if (persistedUser != null)
             {
                 return null;
             }
