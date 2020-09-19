@@ -1,4 +1,5 @@
-﻿using cttMove.Services;
+﻿using cttMove.Models.Db;
+using cttMove.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -8,16 +9,22 @@ using System.Threading.Tasks;
 
 namespace cttMove.Controllers
 {
-    [Route("api/auth")]
+    [Route("api/document")]
     [ApiController]
     [Authorize]
-    public class DocumentController
+    public class DocumentController : ControllerBase
     {
         private DocumentService documentService;
 
         public DocumentController()
         {
             this.documentService = new DocumentService();
+        }
+
+        [HttpPost("document")]
+        public IActionResult createDocument ([FromBody] Document document)
+        {
+            return Ok();
         }
     }
 }

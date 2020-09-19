@@ -10,6 +10,7 @@ namespace cttMove.Services
     public class RefundService
     {
         private RefundRepository _refundRepository;
+        private const int REFUND_START_VALUE = 130;
 
         public RefundService ()
         {
@@ -18,6 +19,7 @@ namespace cttMove.Services
 
         public Refund createRefund (Refund refund)
         {
+            refund.RefundValue = refund.PaidValue > REFUND_START_VALUE ? (refund.PaidValue - REFUND_START_VALUE) : 0;
             return _refundRepository.createRefund(refund);
         }
 
