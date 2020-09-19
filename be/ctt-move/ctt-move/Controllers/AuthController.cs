@@ -53,24 +53,37 @@ namespace cttMove.Controllers
         }
 
         [HttpPost("verify-email")]
-        public IActionResult register ([FromBody] string email)
+        public IActionResult register ([FromBody] CttUser user)
         {
-            bool isEmailFree = authService.isEmailFree(email);
+            bool isEmailFree = authService.isEmailFree(user.Email);
             
             if (isEmailFree)
             {
-                return BadRequest();
+                return Ok(0); //0 = No Error;
             }
 
-            return Ok();
+            return Ok(1); //1 = Error;
         }
 
         [HttpPost("register-user")]
-        [Authorize]
         public IActionResult registerUserDetails([FromBody] CttUser user)
         {
             CttUser persistedUser = authService.registerUser(user);
             return Ok(persistedUser);
+        }
+
+        [Authorize]
+        [HttpPut("update-user")]
+        public IActionResult updateUserDetails([FromBody] CttUser user)
+        {
+            CttUser updatedUser = authService.updateUser(user);
+
+            if (updatedUser == null)
+            {
+                return BadRequest();
+            }
+
+            return Ok(updatedUser);
         }
     }
 }
