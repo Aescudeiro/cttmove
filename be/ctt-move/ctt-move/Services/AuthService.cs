@@ -36,7 +36,7 @@ namespace cttMove.Services
         public bool isEmailFree(string email)
         {
             CttUser user = _authRepository.getUser(email);
-            return user != null;
+            return user == null;
         }
             //string hashedPassword = hash(password);
             //_authRepository.registerNewEmail(email, hashedPassword);

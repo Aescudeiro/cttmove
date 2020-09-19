@@ -53,9 +53,9 @@ namespace cttMove.Controllers
         }
 
         [HttpPost("verify-email")]
-        public IActionResult register ([FromBody] string email)
+        public IActionResult register ([FromBody] CttUser user)
         {
-            bool isEmailFree = authService.isEmailFree(email);
+            bool isEmailFree = authService.isEmailFree(user.Email);
             
             if (isEmailFree)
             {
@@ -65,7 +65,6 @@ namespace cttMove.Controllers
             return Ok();
         }
 
-        [Authorize]
         [HttpPost("register-user")]
         public IActionResult registerUserDetails([FromBody] CttUser user)
         {
