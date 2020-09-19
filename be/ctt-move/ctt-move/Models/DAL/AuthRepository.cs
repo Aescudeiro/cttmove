@@ -38,5 +38,11 @@ namespace cttMove.Models.DAL
 
             return getUser(user.Email);
         }
+
+        public CttUser updateUser(CttUser user)
+        {
+            dbContext.Update(user);
+            return getUser(user.Email);
+        }
     }
 }

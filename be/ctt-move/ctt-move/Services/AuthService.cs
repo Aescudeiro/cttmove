@@ -54,6 +54,20 @@ namespace cttMove.Services
             return _authRepository.registerUser(user);
         }
 
+        public CttUser updateUser (CttUser user)
+        {
+
+            bool isNull = user.GetType().GetProperties()
+                            .All(p => p.GetValue(user) != null);
+
+            if (isNull)
+            {
+                return null;
+            }
+
+            return _authRepository.updateUser(user);
+        }
+
         //TODO: This should be a separate class. It's an utility service
         private string hash(string password, int iterations)
         {

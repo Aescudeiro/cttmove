@@ -65,12 +65,26 @@ namespace cttMove.Controllers
             return Ok();
         }
 
-        [HttpPost("register-user")]
         [Authorize]
+        [HttpPost("register-user")]
         public IActionResult registerUserDetails([FromBody] CttUser user)
         {
             CttUser persistedUser = authService.registerUser(user);
             return Ok(persistedUser);
+        }
+
+        [Authorize]
+        [HttpPut("update-user")]
+        public IActionResult updateUserDetails([FromBody] CttUser user)
+        {
+            CttUser updatedUser = authService.updateUser(user);
+
+            if (updatedUser == null)
+            {
+                return BadRequest();
+            }
+
+            return Ok(updatedUser);
         }
     }
 }
