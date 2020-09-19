@@ -19,6 +19,8 @@ namespace cttMove.Models.Db
         public string Locality { get; set; }
         public int? Iban { get; set; }
         public int? Phone { get; set; }
+        public string PostalCode { get; set; }
+        public string TaxAddress { get; set; }
 
         public ICollection<Refund> Refund { get; set; }
     }

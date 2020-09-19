@@ -69,6 +69,14 @@ namespace cttMove.Models.Db
                 entity.Property(e => e.Pass).HasColumnName("pass");
 
                 entity.Property(e => e.Phone).HasColumnName("phone");
+
+                entity.Property(e => e.PostalCode)
+                    .HasColumnName("postal_code")
+                    .HasMaxLength(100);
+
+                entity.Property(e => e.TaxAddress)
+                    .HasColumnName("tax_address")
+                    .HasMaxLength(100);
             });
 
             modelBuilder.Entity<Document>(entity =>
