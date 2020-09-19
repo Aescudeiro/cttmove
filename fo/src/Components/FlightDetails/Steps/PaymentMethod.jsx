@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./PaymentMethod.css";
+import $ from "jquery";
 
 //Material-UI
 import Radio from "@material-ui/core/Radio";
@@ -13,6 +14,15 @@ const PaymentMethod = () => {
     setValue(event.target.value);
   };
 
+  const handleClick = () =>{
+    $(".transferencia-bancaria").addClass("selected")
+    $(".levantamento-em-dinheiro").removeClass("selected")
+  }
+  const addClass = () =>{
+    $(".levantamento-em-dinheiro").addClass("selected")
+    $(".transferencia-bancaria").removeClass("selected")
+  }
+
   return (
     <div className="payment-method-container">
       <RadioGroup
@@ -22,11 +32,12 @@ const PaymentMethod = () => {
         onChange={handleChange}
       >
         <h3 id="refund-question">Como pretende receber o seu reembolso?</h3>
-        <div className="transferencia-bancaria">
+        <div className="transferencia-bancaria selected" >
           <FormControlLabel
             value="Transferência Bancária"
             control={<Radio />}
             label="Transferência Bancária"
+            onClick={handleClick}
           />
           <p>
             Dependendo do seu banco, a transferência poderá demorar entre 1 e 3
@@ -38,6 +49,7 @@ const PaymentMethod = () => {
             value="Levantamento em Numerário num Balcão CTT"
             control={<Radio />}
             label="Levantamento em Numerário num Balcão CTT"
+            onClick={addClass}
           />
           <p>
             Caso pretenda receber o reembolso em dinheiro, deverá levar o código
