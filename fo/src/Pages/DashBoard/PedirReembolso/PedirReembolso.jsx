@@ -6,6 +6,7 @@ import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
 import FlightDetails from "../../../Components/FlightDetails/FlightDetails.jsx";
 import FileUpload from "../../../Components/FlightDetails/Steps/FileUpload.jsx";
 import PaymentMethod from "../../../Components/FlightDetails/Steps/PaymentMethod.jsx";
+import LoadingPopup from "../../../Components/FlightDetails/Steps/LoadingPopup";
 
 const PedirReembolso = () => {
   const [step, setStep] = useState(1);
@@ -26,6 +27,8 @@ const PedirReembolso = () => {
         return <FileUpload />;
       case 3:
         return <PaymentMethod />;
+      case 4:
+        return <LoadingPopup />;
     }
   };
 

@@ -1,15 +1,20 @@
 .transferencia-bancaria,
 .levantamento-em-dinheiro {
-  border: 1px solid grey;
+  border: 1px solid rgba(206, 206, 206, 0.651);
+  box-shadow: 0px 0px 3px 3px rgb(245, 245, 245);
   padding: 2.5rem;
   border-radius: 5px;
-  border: 1px solid rgb(160, 160, 160);
   margin: 0.75rem 0;
   cursor: pointer;
 }
 
 .transferencia-bancaria:hover,
 .levantamento-em-dinheiro:hover {
+    box-shadow: 0px 0px 5px 5px rgb(238, 238, 238);
+    border: 1px solid red;
+}
+
+.selected {
     box-shadow: 0px 0px 5px 5px rgb(238, 238, 238);
     border: 1px solid red;
 }
