@@ -21,14 +21,14 @@ namespace cttMove.Controllers
             this.flightService = new FlightService();
         }
 
-        [HttpPost("create-flight")]
+        [HttpPost("flight")]
         public IActionResult createFlight ([FromBody] Flight flight)
         {
             Flight persistedFlight = flightService.createFlight(flight);
             return persistedFlight != null ? Ok(persistedFlight) : Ok(1);
         }
 
-        [HttpPost("create-flight")]
+        [HttpPost("rountTripFlights")]
         public IActionResult createFlight([FromBody] Flight[] flightLst)
         {
             Flight[] persistedFlightLst = flightService.createFlight(flightLst);
