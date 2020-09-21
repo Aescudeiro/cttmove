@@ -7,21 +7,27 @@ import Radio from "@material-ui/core/Radio";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 
-
 const PaymentMethod = () => {
   const [value, setValue] = useState("Transferência Bancária");
   const handleChange = (event) => {
     setValue(event.target.value);
   };
 
-  const handleClick = () =>{
-    $(".transferencia-bancaria").addClass("selected")
-    $(".levantamento-em-dinheiro").removeClass("selected")
-  }
-  const addClass = () =>{
-    $(".levantamento-em-dinheiro").addClass("selected")
-    $(".transferencia-bancaria").removeClass("selected")
-  }
+  const handleClick = () => {
+    $(".transferencia-bancaria").addClass("selected");
+    $(".levantamento-em-dinheiro").removeClass("selected");
+    $(".mbway").removeClass("selected");
+  };
+  const addClass = () => {
+    $(".levantamento-em-dinheiro").addClass("selected");
+    $(".transferencia-bancaria").removeClass("selected");
+    $(".mbway").removeClass("selected");
+  };
+  const addClass1 = () => {
+    $(".levantamento-em-dinheiro").removeClass("selected");
+    $(".transferencia-bancaria").removeClass("selected");
+    $(".mbway").addClass("selected");
+  };
 
   return (
     <div className="payment-method-container">
@@ -32,7 +38,7 @@ const PaymentMethod = () => {
         onChange={handleChange}
       >
         <h3 id="refund-question">Como pretende receber o seu reembolso?</h3>
-        <div className="transferencia-bancaria selected" >
+        <div className="transferencia-bancaria selected">
           <FormControlLabel
             value="Transferência Bancária"
             control={<Radio />}
@@ -54,6 +60,18 @@ const PaymentMethod = () => {
           <p>
             Caso pretenda receber o reembolso em dinheiro, deverá levar o código
             que lhe é fornecido a um balcão CTT.
+          </p>
+        </div>
+        <div className="levantamento-em-dinheiro">
+          <FormControlLabel
+            value="MBWAY"
+            control={<Radio />}
+            label="MBWAY"
+            onClick={addClass1}
+          />
+          <p>
+            A transferência será feita para o número de telefone que definiu nas
+            definições de conta.
           </p>
         </div>
       </RadioGroup>

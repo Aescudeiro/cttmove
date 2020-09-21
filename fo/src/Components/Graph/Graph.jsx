@@ -1,7 +1,13 @@
 import React from "react";
 import "./Graph.css";
-import { Area, AreaChart, CartesianGrid, XAxis, Tooltip } from "recharts";
-
+import {
+  Area,
+  AreaChart,
+  CartesianGrid,
+  XAxis,
+  Tooltip,
+  ResponsiveContainer,
+} from "recharts";
 const data = [
   {
     name: "Jan",
@@ -55,10 +61,9 @@ const data = [
 
 const Graph = () => {
   return (
-
     <div className="graph ui-chart">
       <AreaChart
-        width={990}
+        width={1500}
         height={400}
         data={data}
         margin={{ top: 20, right: 30, left: 30, bottom: 20 }}
@@ -83,7 +88,6 @@ const Graph = () => {
         />
       </AreaChart>
     </div>
-    
   );
 };
 

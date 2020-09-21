@@ -1,28 +1,28 @@
-.file-upload-container{
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    flex-wrap: wrap;
+.file-upload-container {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-.file-upload-container p{
-    color: grey;
-    margin: 0 0 1rem 0;
-}
-
-.file-upload-container h3{
-    margin: 2rem 0 0.5rem 0;
-    font-weight: 500;
+.file-upload-container p {
+  color: grey;
+  margin: 0 0 1rem 0;
 }
 
-.dashed-area{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 20rem;
-    border: 2px dashed red;
+.file-upload-container h3 {
+  margin: 2rem 0 0.5rem 0;
+  font-weight: 500;
 }
 
-#drag-and-drop{
-    font-weight: 100;
+.dashed-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 30.5rem;
+  border: 2px dashed red;
+}
+
+#drag-and-drop {
+  font-weight: 100;
 }

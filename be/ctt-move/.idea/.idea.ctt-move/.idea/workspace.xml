@@ -22,7 +22,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="594e145f-e2ad-44d8-90de-0d5bb5d014cc" name="Default Changelist" comment="" />
+    <list default="true" id="594e145f-e2ad-44d8-90de-0d5bb5d014cc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ctt-move/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ctt-move/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fo/src/services/auth-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../fo/src/services/auth-service.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,6 +45,7 @@
         <option value="$PROJECT_DIR$/ctt-move/Properties/launchSettings.json" />
         <option value="$PROJECT_DIR$/ctt-move/Settings.cs" />
         <option value="$PROJECT_DIR$/ctt-move/Controllers/AuthController.cs" />
+        <option value="$PROJECT_DIR$/ctt-move/Services/AuthService.cs" />
       </list>
     </option>
   </component>
@@ -137,61 +141,33 @@
       <screen x="54" y="27" width="1866" height="1053" />
     </state>
     <state x="680" y="379" width="604" height="355" key="#Notifications/54.27.1866.1053@54.27.1866.1053" timestamp="1600449811713" />
+    <state x="582" y="197" width="800" height="719" key="#Plugins" timestamp="1600544807011">
+      <screen x="54" y="27" width="1866" height="1053" />
+    </state>
+    <state x="582" y="197" width="800" height="719" key="#Plugins/54.27.1866.1053@54.27.1866.1053" timestamp="1600544807011" />
     <state x="300" y="59" width="1084" height="839" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600452645971">
       <screen x="54" y="27" width="1866" height="1053" />
     </state>
     <state x="300" y="59" width="1084" height="839" key="#com.intellij.execution.impl.EditConfigurationsDialog/54.27.1866.1053@54.27.1866.1053" timestamp="1600452645971" />
-    <state width="1820" height="245" key="GridCell.Tab.0.bottom" timestamp="1600483622349">
+    <state width="1820" height="245" key="GridCell.Tab.0.bottom" timestamp="1600550565967">
       <screen x="54" y="27" width="1866" height="1053" />
     </state>
-    <state width="1820" height="245" key="GridCell.Tab.0.bottom/54.27.1866.1053@54.27.1866.1053" timestamp="1600483622349" />
-    <state width="1820" height="245" key="GridCell.Tab.0.center" timestamp="1600483622348">
+    <state width="1820" height="245" key="GridCell.Tab.0.bottom/54.27.1866.1053@54.27.1866.1053" timestamp="1600550565967" />
+    <state width="1820" height="245" key="GridCell.Tab.0.center" timestamp="1600550565966">
       <screen x="54" y="27" width="1866" height="1053" />
     </state>
-    <state width="1820" height="245" key="GridCell.Tab.0.center/54.27.1866.1053@54.27.1866.1053" timestamp="1600483622348" />
-    <state width="1820" height="245" key="GridCell.Tab.0.left" timestamp="1600483622348">
+    <state width="1820" height="245" key="GridCell.Tab.0.center/54.27.1866.1053@54.27.1866.1053" timestamp="1600550565966" />
+    <state width="1820" height="245" key="GridCell.Tab.0.left" timestamp="1600550565966">
       <screen x="54" y="27" width="1866" height="1053" />
     </state>
-    <state width="1820" height="245" key="GridCell.Tab.0.left/54.27.1866.1053@54.27.1866.1053" timestamp="1600483622348" />
-    <state width="1820" height="245" key="GridCell.Tab.0.right" timestamp="1600483622348">
+    <state width="1820" height="245" key="GridCell.Tab.0.left/54.27.1866.1053@54.27.1866.1053" timestamp="1600550565966" />
+    <state width="1820" height="245" key="GridCell.Tab.0.right" timestamp="1600550565966">
       <screen x="54" y="27" width="1866" height="1053" />
     </state>
-    <state width="1820" height="245" key="GridCell.Tab.0.right/54.27.1866.1053@54.27.1866.1053" timestamp="1600483622348" />
+    <state width="1820" height="245" key="GridCell.Tab.0.right/54.27.1866.1053@54.27.1866.1053" timestamp="1600550565966" />
     <state x="476" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1600448644153">
       <screen x="54" y="27" width="1866" height="1053" />
     </state>
     <state x="476" y="188" width="1022" height="737" key="SettingsEditor/54.27.1866.1053@54.27.1866.1053" timestamp="1600448644153" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/ctt-move/Controllers/AuthController.cs</url>
-          <line>24</line>
-          <properties documentPath="$PROJECT_DIR$/ctt-move/Controllers/AuthController.cs" initialLine="25">
-            <startOffsets>
-              <option value="592" />
-            </startOffsets>
-            <endOffsets>
-              <option value="662" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/ctt-move/Controllers/AuthController.cs</url>
-          <line>33</line>
-          <properties documentPath="$PROJECT_DIR$/ctt-move/Controllers/AuthController.cs" initialLine="33">
-            <startOffsets>
-              <option value="862" />
-            </startOffsets>
-            <endOffsets>
-              <option value="913" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

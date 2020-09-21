@@ -3,6 +3,8 @@ import "./LoadingPopup.css";
 import { FaTimes } from "react-icons/fa";
 import { makeStyles } from "@material-ui/core/styles";
 import CircularProgress from "@material-ui/core/CircularProgress";
+import { FaCheck, FaChevronRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const LoadingPopup = (props) => {
   const useStyles = makeStyles((theme) => ({
@@ -20,7 +22,7 @@ const LoadingPopup = (props) => {
 
     return (
       <div className={classes.root} id="circle" size={50}>
-        <CircularProgress color="secondary" />
+        <FaCheck size={200} color={"#49BF9C"} />
       </div>
     );
   }
@@ -28,10 +30,8 @@ const LoadingPopup = (props) => {
     <>
       <div className="loading-popup-container">
         {CircularIndeterminate()}
-        <p className="p-refresh">
-          Por favor aguade enquanto processamos o seu pedido.
-        </p>
-        <p>Não faça refresh à página.</p>
+        <p className="p-refresh">Reembolso feito com sucesso.</p>
+        <Link to="/">Voltar à página Inicial</Link>
       </div>
       <div className="background" onClick={props.handleClick}></div>
     </>
