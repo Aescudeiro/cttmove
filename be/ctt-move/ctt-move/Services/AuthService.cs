@@ -56,7 +56,7 @@ namespace cttMove.Services
 
         public CttUser updateUser (CttUser user)
         {
-
+            /*
             bool isNull = user.GetType().GetProperties()
                             .All(p => p.GetValue(user) != null);
 
@@ -64,7 +64,7 @@ namespace cttMove.Services
             {
                 return null;
             }
-
+            */
             return _authRepository.updateUser(user);
         }
 

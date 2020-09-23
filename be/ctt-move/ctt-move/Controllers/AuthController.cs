@@ -72,7 +72,7 @@ namespace cttMove.Controllers
             return Ok(persistedUser);
         }
 
-        [Authorize]
+        
         [HttpPut("update-user")]
         public IActionResult updateUserDetails([FromBody] CttUser user)
         {
