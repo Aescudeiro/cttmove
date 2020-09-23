@@ -77,8 +77,15 @@ namespace cttMove.Controllers
         public IActionResult updateUserPassword ([FromBody] JObject jsonData)
         {
             dynamic json = jsonData;
-            CttUser user = json.cttUser;
+            string userEmail = json.email;
+            string userPass = json.pass;
             string newPassword = json.newPassword;
+
+            CttUser user = new CttUser
+            {
+                Email = userEmail,
+                Pass = userPass
+            };
 
             bool isPassUpdated = authService.updateUserPassword(user, newPassword);
 
