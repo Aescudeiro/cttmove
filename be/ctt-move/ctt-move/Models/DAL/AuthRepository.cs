@@ -41,6 +41,7 @@ namespace cttMove.Models.DAL
 
         public CttUser updateUser(CttUser user)
         {
+            user.Pass = dbContext.CttUser.Where(u => u.Email == user.Email).Select(u => u.Pass).FirstOrDefault(); //FIX NOJENTO
             dbContext.Update(user);
             dbContext.SaveChanges();
             return getUser(user.Email);

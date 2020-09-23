@@ -64,8 +64,6 @@ namespace cttMove.Services
                 return null;
             }
             */
-
-            user.Pass = _authRepository.getUser(user.Email).Pass; //FIX NOJENTO
             return _authRepository.updateUser(user);
         }
 
