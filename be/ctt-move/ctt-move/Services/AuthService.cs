@@ -58,13 +58,14 @@ namespace cttMove.Services
         {
             /*
             bool isNull = user.GetType().GetProperties()
-                            .All(p => p.GetValue(user) != null);
-
+                .All(p => p.GetValue(user) != null);
             if (isNull)
             {
                 return null;
             }
             */
+
+            user.Pass = _authRepository.getUser(user.Email).Pass; //FIX NOJENTO
             return _authRepository.updateUser(user);
         }
 

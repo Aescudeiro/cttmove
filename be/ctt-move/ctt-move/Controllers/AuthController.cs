@@ -42,14 +42,13 @@ namespace cttMove.Controllers
                 CcNumber = loggedUser.CcNumber,
                 Locality = loggedUser.Locality,
                 Iban = loggedUser.Iban,
-                Phone = loggedUser.Phone
+                Phone = loggedUser.Phone,
+                PostalCode = loggedUser.PostalCode,
+                TaxAddress = loggedUser.TaxAddress,
+                Token = token
             };
 
-            return Ok( new
-            {
-                user = userDTO,
-                token = token
-            });
+            return Ok(userDTO);
         }
 
         [HttpPost("verify-email")]
@@ -72,9 +71,9 @@ namespace cttMove.Controllers
             return Ok(persistedUser);
         }
 
-        
+        [Authorize]
         [HttpPut("update-user")]
-        public IActionResult updateUserDetails([FromBody] CttUser user)
+        public IActionResult updateUserDetails([FromBody] CttUser user) //Should be a CttUserDTO post... password problems
         {
             CttUser updatedUser = authService.updateUser(user);
 
@@ -83,7 +82,21 @@ namespace cttMove.Controllers
                 return BadRequest();
             }
 
-            return Ok(updatedUser);
+            var userDTO = new //DTO Should be a proper DTO class...
+            {
+                Email = updatedUser.Email,
+                FullName = updatedUser.FullName,
+                BirthDate = updatedUser.BirthDate,
+                Nif = updatedUser.Nif,
+                CcNumber = updatedUser.CcNumber,
+                Locality = updatedUser.Locality,
+                Iban = updatedUser.Iban,
+                Phone = updatedUser.Phone,
+                PostalCode = updatedUser.PostalCode,
+                TaxAddress = updatedUser.TaxAddress
+            };
+
+            return Ok(userDTO);
         }
     }
 }
