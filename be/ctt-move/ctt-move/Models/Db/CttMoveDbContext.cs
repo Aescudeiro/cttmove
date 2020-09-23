@@ -25,17 +25,16 @@ namespace cttMove.Models.Db
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+        IConfigurationRoot configuration = new ConfigurationBuilder()
+            .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
+            .AddJsonFile("appsettings.json")
+            .Build();
 
-            IConfigurationRoot configuration = new ConfigurationBuilder()
-                .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
-                .AddJsonFile("appsettings.json")
-                .Build();
-
-            if (!optionsBuilder.IsConfigured)
-            {
-                optionsBuilder.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
-            }
+        if (!optionsBuilder.IsConfigured)
+        {
+            optionsBuilder.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
         }
+    }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -58,7 +57,9 @@ namespace cttMove.Models.Db
                     .HasColumnName("full_name")
                     .HasMaxLength(100);
 
-                entity.Property(e => e.Iban).HasColumnName("iban");
+                entity.Property(e => e.Iban)
+                    .HasColumnName("iban")
+                    .HasMaxLength(50);
 
                 entity.Property(e => e.Locality)
                     .HasColumnName("locality")
