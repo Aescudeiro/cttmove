@@ -72,7 +72,7 @@ namespace cttMove.Controllers
             return Ok(persistedUser);
         }
 
-        [Authorize]
+        
         [HttpPut("update-password")]
         public IActionResult updateUserPassword ([FromBody] JObject jsonData)
         {
@@ -82,13 +82,23 @@ namespace cttMove.Controllers
 
             bool isPassUpdated = authService.updateUserPassword(user, newPassword);
 
+            if (!isPassUpdated)
+            {
+                return BadRequest();
+            }
+
             return Ok();
         }
 
-        [Authorize]
+        
         [HttpPut("update-user")]
         public IActionResult updateUserDetails([FromBody] CttUser user) //Should be a CttUserDTO post... password problems
         {
+            if (user.Email == null)
+            {
+                return BadRequest();
+            }
+
             CttUser updatedUser = authService.updateUser(user);
 
             if (updatedUser == null)

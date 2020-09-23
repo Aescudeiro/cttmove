@@ -61,7 +61,7 @@ namespace cttMove.Models.DAL
             };
 
 
-            dbContext.Update(user);
+            dbContext.Update(preUpdateUser);
             dbContext.SaveChanges();
             return getUser(user.Email);
         }
