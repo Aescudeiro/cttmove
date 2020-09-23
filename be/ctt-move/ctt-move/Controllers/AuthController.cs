@@ -2,6 +2,7 @@
 using cttMove.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -71,7 +72,20 @@ namespace cttMove.Controllers
             return Ok(persistedUser);
         }
 
-       
+        [Authorize]
+        [HttpPut("update-password")]
+        public IActionResult updateUserPassword ([FromBody] JObject jsonData)
+        {
+            dynamic json = jsonData;
+            CttUser user = json.cttUser;
+            string newPassword = json.newPassword;
+
+            bool isPassUpdated = authService.updateUserPassword(user, newPassword);
+
+            return Ok();
+        }
+
+        [Authorize]
         [HttpPut("update-user")]
         public IActionResult updateUserDetails([FromBody] CttUser user) //Should be a CttUserDTO post... password problems
         {

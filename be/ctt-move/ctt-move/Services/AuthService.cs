@@ -67,6 +67,19 @@ namespace cttMove.Services
             return _authRepository.updateUser(user);
         }
 
+        public bool updateUserPassword(CttUser user, string newPassword)
+        {
+            if (!this._authRepository.isUserPersisted(user.Email))
+            {
+                return false;
+            }
+
+            user.Pass = hash(newPassword);
+            CttUser persistedUser = this._authRepository.updateUser(user);
+
+            return persistedUser == null ? false : true;
+        }
+
         //TODO: This should be a separate class. It's an utility service
         private string hash(string password, int iterations)
         {
